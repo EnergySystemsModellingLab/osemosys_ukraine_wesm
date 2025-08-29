@@ -54,14 +54,12 @@ The current version of the Ukraine WESM explicitly tracks only CO\ :sub:`2` emis
    :widths: 30, 70
    :header-rows: 1
 
-
-
 1.3 Reference energy system
 ===========================
 
 An overview of the complete reference energy system (RES) for Ukraine is shown in the following figure. Beginning on the left, each block represents one or more technologies, depending on whether the associated commodity is domestically produced or imported. The bottom part of the diagram illustrates the power sector (ELC technologies). Each block can correspond to as many as thirty-four individual power plants, since generation in the model is represented at the single-plant level for nuclear power plants and at the global level for other power plants, such as coal and natural gas. Electricity imports are modelled at the transmission stage. At the same time, distribution to the end‑use sectors occurs after both transmission/distribution grids (T_D), with system losses incorporated. Below the uranium production section, other fuels that are consumed directly in end-use sectors are listed, alongside downstream conversion processes such as biomass-to-syngas, which generate secondary fuels. Each end-use sector is represented separately, bounded by the fuel-technology mix (FTE) technologies, and includes its own sector-specific fuels, technologies, and final energy service demands.
 
-.. image:: ./img/wesm_res.svg
+.. image:: ./img/wesm_res.png
   :width: 1200
   :alt: Reference energy system
 
