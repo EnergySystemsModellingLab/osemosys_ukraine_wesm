@@ -3,11 +3,12 @@
 ==================
 
 The structure of the Ukraine WESM model is outlined in the sections that follow. Section 1.1 provides an overview of the overall model framework. In contrast, Section 1.2 explains how the OSeMOSYS sets have been configured for the Ukrainian context, including the full range of commodities, technologies, and emissions accounted for. These elements are then combined to form the Reference Energy System (RES), which is introduced in Section 1.3 and subsequently examined in greater detail—sector by sector—in Section 1.4.
+
 1.1 General model structure 
 ===========================
 
 The overall model framework is illustrated in the following figure. Primary energy in Ukraine can be either extracted domestically or imported. The country's energy system is characterised by a diverse resource base: significant nuclear capacity, domestic coal and natural gas, as well as growing contributions from renewables such as wind, solar, hydro, and biomass. Ukraine maintains substantial fossil fuel use, although its dependence on imports, especially natural gas, oil products, and coking coal, remains strategically important due to energy security concerns. Imported fuels and domestically produced energy are distributed across all sectors of the economy. The final energy demand of each sector is translated into energy service requirements within the model, enabling the identification of the cost-optimal technology mix to meet Ukraine's needs.
-.. image:: ./img/general_structure.svg
+.. image:: ./fig/general_structure.png
   :width: 1200
   :alt: Simplified Reference energy system
 
