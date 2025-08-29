@@ -8,6 +8,7 @@ The structure of the Ukraine WESM model is outlined in the sections that follow.
 ===========================
 
 The overall model framework is illustrated in the following figure. Primary energy in Ukraine can be either extracted domestically or imported. The country's energy system is characterised by a diverse resource base: significant nuclear capacity, domestic coal and natural gas, as well as growing contributions from renewables such as wind, solar, hydro, and biomass. Ukraine maintains substantial fossil fuel use, although its dependence on imports, especially natural gas, oil products, and coking coal, remains strategically important due to energy security concerns. Imported fuels and domestically produced energy are distributed across all sectors of the economy. The final energy demand of each sector is translated into energy service requirements within the model, enabling the identification of the cost-optimal technology mix to meet Ukraine's needs.
+
 .. image:: ./fig/general_structure.png
   :width: 1200
   :alt: Simplified Reference energy system
@@ -20,6 +21,7 @@ The  "sets" within the Ukraine WESM model define its overall structure, encompas
 Region and years
 ----------------
 The Ukraine WESM operates as a single-node national model, meaning it treats the entire country as one integrated energy system without explicitly modelling internal energy flows between different regions. Its time horizon spans from 2020 to 2050, with calculations performed in one-year increments. The initial period, specifically 2020 to 2022, is dedicated to model calibration, following the Energy Balance for Ukraine 2020.
+
 Timeslices
 ----------
 Timeslices are how the model represents temporal variations within a single year. The Ukraine WESM employs 72 distinct timeslices, derived from combining 12 seasons (one for each month) and six specific time intervals throughout each day. This detailed temporal resolution allows for a nuanced capture of energy demand and supply fluctuations.
@@ -27,6 +29,7 @@ Timeslices are how the model represents temporal variations within a single year
 Fuels/Commodities
 -----
 Fuels in the Ukraine WESM include all commodities represented in the model, whether primary or secondary. Both categories may be sourced domestically or imported. Ukraine possesses significant domestic resources, including coal, natural gas, hydroelectric power, biomass, solar energy, and wind energy, while still relying on imports of oil products and, historically, natural gas to meet its demand. Imported fuels can be used across multiple sectors and include crude oil, petroleum products (such as diesel, gasoline, jet fuel, LPG, kerosene, and heavy fuel oil), as well as natural gas. Locally, renewable-based secondary carriers such as bioethanol, biogas, and biomass-derived heat and power are considered. Electricity is generated from the country's diverse mix of power plants—dominated by nuclear, hydro, coal, and an increasing share of renewables—and may also be exchanged through cross-border interconnectors with neighbouring European systems. To facilitate model analysis, sector-specific fuel categories are mapped to broader generic fuels via simplified "fuel-technology mix" (FTE) technologies. Finally, as in other OSeMOSYS applications, demands are represented as fuels, each identified by the prefix DEM.
+
 .. csv-table:: 
    :file: ./data/fuels.csv
    :widths: 30, 70
@@ -35,6 +38,7 @@ Fuels in the Ukraine WESM include all commodities represented in the model, whet
 Technologies and modes of operation
 -----------------------------------
 All technologies included in the Ukraine WESM are organised within the technologies set. Imported fuels and resources (IMP) and domestic resources (MIN) are characterised by technologies that generate only an output fuel. The power sector is modelled at an individual power plant level (ELC technologies), reflecting the diversity of Ukraine's generation mix, which includes nuclear, thermal, hydro, and renewable assets. Transmission and distribution (T_D) networks are represented by a single technology to capture system-level losses. Each end-use sector is connected to the energy system through fuel-technology mix (FTE) technologies, one for each fuel available within that sector. These FTEs facilitate the post-processing of model results while also enabling the representation of sector-specific costs and efficiencies that are not directly embedded in the technology definitions. Beyond this, each sector features its own dedicated technologies—identified with sector-specific prefixes—that transform the available fuels into useful energy services (e.g., transport mobility, industrial heat, residential heating, etc.). For the present modelling framework, only one operating mode is assigned per technology.
+
 .. csv-table:: 
    :file: ./data/technologies.csv
    :widths: 30, 70
