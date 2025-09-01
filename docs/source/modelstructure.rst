@@ -31,7 +31,7 @@ Fuels/Commodities
 Fuels in the Ukraine WESM include all commodities represented in the model, whether primary or secondary. Both categories may be sourced domestically or imported. Ukraine possesses significant domestic resources, including coal, natural gas, hydroelectric power, biomass, solar energy, and wind energy, while still relying on imports of oil products and, historically, natural gas to meet its demand. Imported fuels can be used across multiple sectors and include crude oil, petroleum products (such as diesel, gasoline, jet fuel, LPG, kerosene, and heavy fuel oil), as well as natural gas. Locally, renewable-based secondary carriers such as bioethanol, biogas, and biomass-derived heat and power are considered. Electricity is generated from the country's diverse mix of power plants—dominated by nuclear, hydro, coal, and an increasing share of renewables—and may also be exchanged through cross-border interconnectors with neighbouring European systems. To facilitate model analysis, sector-specific fuel categories are mapped to broader generic fuels via simplified "fuel-technology mix" (FTE) technologies. Finally, as in other OSeMOSYS applications, demands are represented as fuels, each identified by the prefix DEM.
 
 .. csv-table:: 
-   :file: ./data/fuels.csv
+   :file: ./data/fuel_commodity.csv
    :widths: 30, 70
    :header-rows: 1
 
@@ -72,7 +72,7 @@ Agriculture
 
 The Ukraine WESM features a more detailed representation of agricultural energy use, with distinct demand categories for coal, petroleum products, natural gas, biomass, electricity, and heat. Each fuel type is linked to corresponding technologies that supply the sector, enabling a more comprehensive analysis of Ukraine's agricultural energy mix and its potential transition pathways.
 
-.. image:: ./fig/wesm_agriculture.svg
+.. image:: ./fig/wesm_agriculture.png
   :width: 1200
   :alt: Agricultural sector
 
@@ -81,7 +81,7 @@ Commercial sector
 
 In the Ukraine WESM, the commercial and public services sector is modelled with a broader set of fuel demands, reflecting the sector's diverse energy requirements. These include coal, petroleum products, LPG, natural gas, biomass, electricity, and heat. Each demand category is linked to the relevant technologies, enabling the model to capture Ukraine's reliance on both fossil fuels and district heating, as well as its growing electricity demand.
 
-.. image:: ./fig/wesm_commercial.svg
+.. image:: ./fig/wesm_commercial.png
   :width: 1200
   :alt: Commercial sector
   
@@ -91,7 +91,7 @@ The industrial sector in the Ukraine WESM is represented with more complexity th
 
 For both IMM and IOM subsectors, demand categories are explicitly defined for coal, coal products, petroleum products, natural gas, biomass, electricity, and heat. This structure reflects the energy‑intensive nature of Ukraine's industries, particularly steel, cement, and chemicals, which remain major consumers of coal, natural gas, and heat. Meanwhile, food processing and lighter manufacturing are also included, with a stronger emphasis on electricity and heat.
 
-.. image:: ./fig/wesm_industry.svg
+.. image:: ./fig/wesm_industry.png
   :width: 1200
   :alt: Industrial sector
 
@@ -102,7 +102,7 @@ The residential sector is a complex component of the Ukraine WESM, reflecting bo
 
 The Ukrainian context is heavily shaped by space heating and hot water demand, given the country's cold climate and widespread district heating networks. Residential heating can be covered by a broad portfolio of fuels and technologies, including natural gas boilers, coal stoves, biomass burners, electric heaters, and district heating connections. Cooking is also represented by multiple technological variants, spanning gas stoves, electric stoves, LPG stoves, and traditional biomass devices. Lighting relies almost exclusively on electricity in both urban and rural areas. At the same time, cooling demand, although currently small, is met by electricity-based appliances.
 
-.. image:: ./fig/wesm_residential.svg
+.. image:: ./fig/wesm_residential.png
   :width: 1200
   :alt: Residential sector
   
@@ -117,7 +117,7 @@ The railway system is represented by technologies using coal, diesel, and electr
 
 Aviation demand is satisfied exclusively by technologies using jet fuel (kerosene‑based aviation fuel). In contrast, navigation demand (inland and maritime shipping) relies on petroleum products such as heavy fuel oil and diesel.
 
-.. image:: ./fig/wesm_transports.svg
+.. image:: ./fig/wesm_transport.png
   :width: 1200
   :alt: Transport sector
 
@@ -126,6 +126,6 @@ Aviation demand is satisfied exclusively by technologies using jet fuel (kerosen
 
 The iron and steel sector in Ukraine's WESM is explicitly modelled due to its central role in the country's economy and its significant contribution to energy use and CO₂ emissions. Conventional steelmaking technologies are represented, including the Blast Furnace (BF), Basic Oxygen Furnace (BOF), Open Hearth Furnace (OHF), and Electric Arc Furnace (EAF), which capture the diversity of Ukraine's current steel production base. In addition to these conventional routes, the model also incorporates low‑carbon steelmaking options. These include the CCS‑equipped Blast Furnace–Basic Oxygen Furnace (CCS BF‑BOF) pathway, which reduces emissions by capturing and storing CO₂; Direct Reduced Iron using Natural Gas (DRI‑NG), a less carbon‑intensive alternative; and Direct Reduced Iron using Hydrogen (DRI‑H₂), coupled with an electrolyser to produce the required hydrogen from water and electricity. By incorporating both traditional and emerging low-carbon routes, the model facilitates the evaluation of transition pathways for Ukraine's steel industry, taking into account energy demand, opportunities for emission reduction, and technological shifts over time.
 
-.. image:: ./fig/iron_stell.png
+.. image:: ./fig/wesm_iron_steel.png
   :width: 1200
   :alt: Iron-steel
