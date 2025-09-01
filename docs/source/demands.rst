@@ -53,27 +53,22 @@ Within each area, fuel consumption is further mapped to specific technologies un
 The key demand–technology mappings are:
 
 * Cooling
-
-* Urban: Electricity – Base efficiency
-* Rural: Electricity – Base efficiency
+  * Urban: Electricity – Base efficiency
+  * Rural: Electricity – Base efficiency
 
 * Cooking
-
-* Urban:
-
-* Coal – Base efficiency
-* Electricity (induction) – Base efficiency
-* Natural gas – Base efficiency
-* LPG – Base efficiency
-* Biomass (wood, charcoal) – Improved efficiency (e.g. improved stoves)
-
-* Rural:
-
-* Coal – Base efficiency
-* Electricity (induction) – Base efficiency
-* Natural gas – Base efficiency
-* LPG – Base efficiency
-* Biomass – Improved efficiency (improved traditional stoves)
+  * Urban:
+    * Coal – Base efficiency
+    * Electricity (induction) – Base efficiency
+    * Natural gas – Base efficiency
+    * LPG – Base efficiency
+    * Biomass (wood, charcoal) – Improved efficiency (e.g. improved stoves)
+  * Rural:
+    * Coal – Base efficiency
+    * Electricity (induction) – Base efficiency
+    * Natural gas – Base efficiency
+    * LPG – Base efficiency
+    * Biomass – Improved efficiency (improved traditional stoves)
 
 * Lighting
 
