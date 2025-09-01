@@ -121,7 +121,7 @@ Aviation demand is satisfied exclusively by technologies using jet fuel (kerosen
   :width: 1200
   :alt: Transport sector
 
- Iron and Steel
+Iron and Steel
 ----------
 
 The iron and steel sector in Ukraine's WESM is explicitly modelled due to its central role in the country's economy and its significant contribution to energy use and CO₂ emissions. Conventional steelmaking technologies are represented, including the Blast Furnace (BF), Basic Oxygen Furnace (BOF), Open Hearth Furnace (OHF), and Electric Arc Furnace (EAF), which capture the diversity of Ukraine's current steel production base. In addition to these conventional routes, the model also incorporates low‑carbon steelmaking options. These include the CCS‑equipped Blast Furnace–Basic Oxygen Furnace (CCS BF‑BOF) pathway, which reduces emissions by capturing and storing CO₂; Direct Reduced Iron using Natural Gas (DRI‑NG), a less carbon‑intensive alternative; and Direct Reduced Iron using Hydrogen (DRI‑H₂), coupled with an electrolyser to produce the required hydrogen from water and electricity. By incorporating both traditional and emerging low-carbon routes, the model facilitates the evaluation of transition pathways for Ukraine's steel industry, taking into account energy demand, opportunities for emission reduction, and technological shifts over time.
@@ -129,3 +129,12 @@ The iron and steel sector in Ukraine's WESM is explicitly modelled due to its ce
 .. image:: ./fig/wesm_iron_steel.png
   :width: 1200
   :alt: Iron-steel
+
+Low carbon fuels
+----------
+
+The model also incorporates low carbon fuels pathways, which play an important role in decarbonising the transport and power sectors. Syngas (SYG) is produced through gasification processes (GSFR), often using low carbon biomass as feedstock, and can be further converted into synthetic natural gas (SNG) through a methanation process (MTHPLANT). Alternatively, syngas can be directed into a Fischer–Tropsch (FT) plant, which yields FT diesel (FTDSL) as a liquid low carbon fuel, while also capturing and accounting for associated CO₂ emissions. In addition, the system considers the use of hydrogen (H₂) both as a direct input to syngas upgrading and as a complementary pathway to synthetic fuel production. The model also includes the ELCIGCC technology, where syngas is used directly in an integrated gasification combined cycle (IGCC) power plant to generate electricity more efficiently while offering the potential for carbon capture integration. By modelling these conversion routes, the framework captures the potential of advanced low carbon fuels to substitute conventional fossil fuels in Ukraine’s energy mix, supporting deep emission reductions and offering flexibility across multiple demand sectors.
+
+.. image:: ./fig/wesm_lcf.png
+  :width: 1200
+  :alt: low carbon fuel
