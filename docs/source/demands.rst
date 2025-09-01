@@ -66,8 +66,9 @@ The key demand–technology mappings are:
     * Natural gas – Base efficiency
     * LPG – Base efficiency
     * Biomass (wood, charcoal) – Improved efficiency (e.g. improved stoves)
-    
+
   * Rural:
+
     * Coal – Base efficiency
     * Electricity (induction) – Base efficiency
     * Natural gas – Base efficiency
@@ -76,39 +77,48 @@ The key demand–technology mappings are:
 
 * Lighting
 
-Urban: Electricity – Base efficiency
-Rural: Electricity – Base efficiency
+  * Urban: Electricity – Base efficiency
+  * Rural: Electricity – Base efficiency
 
 * Heating & Hot Water
-* Urban:
-* Coal – Base efficiency
-* Oil products – Base efficiency
-* Natural gas – Base efficiency
-* Biomass – Base efficiency
-* Electricity – Base efficiency
-* District heating – Base efficiency
-* Rural:
-* Coal – Base efficiency
-* Oil products – Base efficiency
-* Natural gas – Base efficiency
-* Biomass – Base efficiency
-* Electricity – Base efficiency
-* District heating – Base efficiency
+
+  * Urban:
+
+    * Coal – Base efficiency
+    * Oil products – Base efficiency
+    * Natural gas – Base efficiency
+    * Biomass – Base efficiency
+    * Electricity – Base efficiency
+    * District heating – Base efficiency
+
+  * Rural:
+
+    * Coal – Base efficiency
+    * Oil products – Base efficiency
+    * Natural gas – Base efficiency
+    * Biomass – Base efficiency
+    * Electricity – Base efficiency
+    * District heating – Base efficiency
+
 This detailed representation enables the model to capture both fuel use and technology choices within households, allowing for the analysis of fuel switching, electrification, efficiency improvements (e.g., modern biomass cookstoves, induction cooking), and the role of district heating in urban areas. It also accounts for the urban–rural divide in Ukraine's residential energy system, where reliance on solid fuels remains higher in rural areas. In contrast, urban households are more integrated into the electricity and district heating networks.
 
-Transports
+Transport
 ----------
 
 In the transport sector, demand is represented in terms of transport services rather than direct fuel consumption. Drawing on the 2020 Ukrainian energy balance, passenger and freight activity levels were established and expressed in billion passenger-kilometres (BPKM) for passenger travel and billion tonne-kilometres (BTKM) for freight movement. These service demands are then met by specific transport technologies linked to different fuels.
 
 * Passenger transport (BPKM):
-* Buses (road transport): petroleum products, natural gas (CNG/LNG), biodiesel
-* Rail transport: coal, diesel, electricity (reflecting both the diesel and electrified portions of Ukraine's rail system)
-* Navigation: petroleum products (mainly diesel and heavy fuel oil used in inland/coastal shipping)
+
+  * Buses (road transport): petroleum products, natural gas (CNG/LNG), biodiesel
+  * Rail transport: coal, diesel, electricity (reflecting both the diesel and electrified portions of Ukraine's rail system)
+  * Navigation: petroleum products (mainly diesel and heavy fuel oil used in inland/coastal shipping)
+
 * Freight transport (BTKM):
-* Road freight: petroleum products, natural gas, biodiesel
-* Rail freight: coal, diesel, electricity
-* Navigation (shipping): petroleum products
+
+  * Road freight: petroleum products, natural gas, biodiesel
+  * Rail freight: coal, diesel, electricity
+  * Navigation (shipping): petroleum products
+
 In the model, the final demands are expressed explicitly as BPKM for passenger transport and BTKM for freight transport, rather than in energy terms. The corresponding fuel use (in PJ) is then calculated based on the efficiency of the associated technologies. This design reflects the actual transport service demand in Ukraine's economy, capturing the high share of rail in freight movement, the dominant role of petroleum products in road modes, and the potential for fuel switching and electrification in long-term transition pathways.
 
 .. rubric:: Footnotes
