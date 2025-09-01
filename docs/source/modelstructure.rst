@@ -10,7 +10,7 @@ The structure of the Ukraine WESM model is outlined in the sections that follow.
 The overall model framework is illustrated in the following figure. Primary energy in Ukraine can be either extracted domestically or imported. The country's energy system is characterised by a diverse resource base: significant nuclear capacity, domestic coal and natural gas, as well as growing contributions from renewables such as wind, solar, hydro, and biomass. Ukraine maintains substantial fossil fuel use, although its dependence on imports, especially natural gas, oil products, and coking coal, remains strategically important due to energy security concerns. Imported fuels and domestically produced energy are distributed across all sectors of the economy. The final energy demand of each sector is translated into energy service requirements within the model, enabling the identification of the cost-optimal technology mix to meet Ukraine's needs.
 
 .. image:: ./fig/general_structure.png
-  :width: 1200
+  :width: 1000
   :alt: Simplified Reference energy system
 
 1.2 Model configuration - Sets
