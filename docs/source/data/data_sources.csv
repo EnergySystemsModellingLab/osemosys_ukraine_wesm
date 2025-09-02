@@ -1,0 +1,16 @@
+Category,Source,Data type,Link
+Power Sector,DTU,"Technoeconomic data	",https://backend.orbit.dtu.dk/ws/portalfiles/portal/190787097/long_term_energy_modelling_and_forecasting_in_ukraine_english.pdf
+,Energy Charter,Evaluation and damage of infrastructure,https://www.energycharter.org/fileadmin/DocumentsMedia/Occasional/2023_05_24_UA_sectoral_evaluation_and_damage_assessment_Version_X_final.pdf
+,"State Statistic Service of Ukraine	",Dataset time series electricity,https://www.ukrstat.gov.ua/
+Residential,"WHO	","Dataset  HH	","	https://www.who.int/data/gho/data/indicators/indicator-details/GHO/proportion-of-population-with-primary-reliance-on-fuels-and-technologies-for-cooking-by-fuel-type"
+,,Dataset  HH,https://mics.unicef.org/sites/mics/files/Ukraine%202012%20MICS_English.pdf
+Transport,"State Statistic Service of Ukraine	",Dataset transport,https://www.ukrstat.gov.ua/
+,The Danish Energy Agency,Technoeconomic data,https://ens.dk/en/analyses-and-statistics/technology-catalogue-commercial-freight-and-passenger-transport
+Iron Steel,IKI,Technoeconomic data,https://www.lowcarbonukraine.com/wp-content/uploads/LCU_PB_05_Ukraine_Steel_sector_final.pdf
+,EU parliament,Technoeconomic data,https://www.europarl.europa.eu/RegData/etudes/BRIE/2020/641552/EPRS_BRI(2020)641552_EN.pdf
+,Joule,Technoeconomic data,https://www.sciencedirect.com/science/article/pii/S2542435124004252
+Demands,UN,Energy Balance,https://unstats.un.org/unsd/energystats/dataPortal/
+,World Bank Group,Drivers,https://data.worldbank.org/country/ukraine
+Agriculture,UN,Energy Balance,https://unstats.un.org/unsd/energystats/dataPortal/
+Industry,UN,Energy Balance,https://unstats.un.org/unsd/energystats/dataPortal/
+Commercial,UN,Energy Balance,https://unstats.un.org/unsd/energystats/dataPortal/
