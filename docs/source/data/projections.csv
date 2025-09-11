@@ -1,0 +1,16 @@
+Category,Demand,Driver
+Residential,Cooling urban/rural,Population
+,Lighting urban/rural,Population
+,Heating urban/rural,Population
+,Cooking,Households/population
+Commercial,Fuels/commodities,GDP growth rate/sector GDP
+Industry,Fuels/commodities IM (Industry Manufacturing),GDP growth rate/sector GDP
+,Fuels/commodities IO (Industry Mining),GDP growth rate/sector GDP
+Iron Steel,MT steel,GDP growth rate/sector GDP
+Agriculture,Fuels/commodities,GDP growth rate/sector GDP
+Transport,Passenger transport buses-auto,Population
+,Passenger transport rail,Population
+,Passenger transport navigation,Population
+,Freight transport road,GDP
+,Freight transport rail,GDP
+,Freight transport navigation,GDP

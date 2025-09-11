@@ -1,93 +1,1118 @@
 <!DOCTYPE html>
-
-<html lang="en" data-content_root="./">
+<html  lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1"><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>1. Model structure &#8212; Ukraine WESM Model Docs 0.1 documentation</title>
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=5ecbeea2" />
-    <link rel="stylesheet" type="text/css" href="_static/basic.css?v=b08954a9" />
-    <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=27fed22d" />
-    <script src="_static/documentation_options.js?v=2709fde1"></script>
-    <script src="_static/doctools.js?v=9bcbadda"></script>
-    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
-    <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="Ukraine WESM Model Docs documentation" href="index.html" />
-   
-  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
-  
+      <title>1. Model structure</title>
+    
+          <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+          <link rel="stylesheet" href="_static/theme.css " type="text/css" />
+      
+      <!-- sphinx script_files -->
+        <script src="_static/documentation_options.js?v=2709fde1"></script>
+        <script src="_static/doctools.js?v=9bcbadda"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
 
-  
-  
+      
+      <!-- bundled in js (rollup iife) -->
+      <!-- <script src="_static/theme-vendors.js"></script> -->
+      <script src="_static/theme.js" defer></script>
+    
+  <link rel="index" title="Index" href="genindex.html" />
+  <link rel="search" title="Search" href="search.html" />
+  <link rel="next" title="2. Demand projections" href="demands.html" />
+  <link rel="prev" title="Ukraine WESM Model Docs documentation" href="index.html" /> 
+  </head>
 
-  </head><body>
-  
+  <body>
+    <div id="app">
+    <div class="theme-container" :class="pageClasses"><navbar @toggle-sidebar="toggleSidebar">
+  <router-link to="index.html" class="home-link">
+    
+      <span class="site-name">Ukraine WESM Model Docs</span>
+    
+  </router-link>
 
-    <div class="document">
-      <div class="documentwrapper">
-        <div class="bodywrapper">
+  <div class="links">
+    <navlinks class="can-hide">
+
+
+
+    </navlinks>
+  </div>
+</navbar>
+
+      
+      <div class="sidebar-mask" @click="toggleSidebar(false)">
+      </div>
+        <sidebar @toggle-sidebar="toggleSidebar">
           
+          <navlinks>
+            
 
-          <div class="body" role="main">
+
+
+            
+          </navlinks><div id="searchbox" class="searchbox" role="search">
+  <div class="caption"><span class="caption-text">Quick search</span>
+    <div class="searchformwrapper">
+      <form class="search" action="search.html" method="get">
+        <input type="text" name="q" />
+        <input type="submit" value="Search" />
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+      </form>
+    </div>
+  </div>
+</div><div class="sidebar-links" role="navigation" aria-label="main navigation">
+  
+    <div class="sidebar-group">
+      <p class="caption">
+        <span class="caption-text"><a href="index.html#ukraine-wesm-model-docs-documentation">Contents:</a></span>
+      </p>
+      <ul class="current">
+        
+          <li class="toctree-l1 current">
+            
+              <a href="#" class="reference internal current">1. Model structure</a>
+            
+
+            
+              <ul>
+                
+                  <li class="toctree-l2"><a href="#general-model-structure" class="reference internal">1.1 General model structure</a></li>
+                
+                  <li class="toctree-l2"><a href="#model-configuration-sets" class="reference internal">1.2 Model configuration - Sets</a></li>
+                
+                  <li class="toctree-l2"><a href="#reference-energy-system" class="reference internal">1.3 Reference energy system</a></li>
+                
+                  <li class="toctree-l2"><a href="#sectors" class="reference internal">1.4 Sectors</a></li>
+                
+              </ul>
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="demands.html" class="reference internal ">2. Demand projections</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="datainputs.html" class="reference internal ">3. Data inputs</a>
+            
+
+            
+          </li>
+
+        
+      </ul>
+    </div>
+  
+</div>
+        </sidebar>
+
+      <page>
+          <div class="body-header" role="navigation" aria-label="navigation">
+  
+  <ul class="breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+    
+    <li>1. Model structure</li>
+  </ul>
+  
+
+  <ul class="page-nav">
+  <li class="prev">
+    <a href="index.html"
+       title="previous chapter">← Ukraine WESM Model Docs documentation</a>
+  </li>
+  <li class="next">
+    <a href="demands.html"
+       title="next chapter">2. Demand projections →</a>
+  </li>
+</ul>
+  
+</div>
+<hr>
+          <div class="content" role="main" v-pre>
             
   <section id="model-structure">
 <h1>1. Model structure<a class="headerlink" href="#model-structure" title="Link to this heading">¶</a></h1>
-<p>The structure of the Ukraine WESM model is outlined in the sections that follow. Section 1.1 provides an overview of the overall model framework. In contrast, Section 1.2 explains how the OSeMOSYS sets have been configured for the Ukrainian context, including the full range of commodities, technologies, and emissions accounted for. These elements are then combined to form the Reference Energy System (RES), which is introduced in Section 1.3 and subsequently examined in greater detail—sector by sector—in Section 1.4.
-1.1 General model structure
-===========================</p>
-<p>The overall model framework is illustrated in the following figure. Primary energy in Ukraine can be either extracted domestically or imported. The country’s energy system is characterised by a diverse resource base: significant nuclear capacity, domestic coal and natural gas, as well as growing contributions from renewables such as wind, solar, hydro, and biomass. Ukraine maintains substantial fossil fuel use, although its dependence on imports, especially natural gas, oil products, and coking coal, remains strategically important due to energy security concerns. Imported fuels and domestically produced energy are distributed across all sectors of the economy. The final energy demand of each sector is translated into energy service requirements within the model, enabling the identification of the cost-optimal technology mix to meet Ukraine’s needs.
-.. image:: ./img/general_structure.svg</p>
-<blockquote>
-<div><dl class="field-list simple">
-<dt class="field-odd">width<span class="colon">:</span></dt>
-<dd class="field-odd"><p>1200</p>
-</dd>
-<dt class="field-even">alt<span class="colon">:</span></dt>
-<dd class="field-even"><p>Simplified Reference energy system</p>
-</dd>
-</dl>
-</div></blockquote>
+<p>The structure of the Ukraine WESM model is outlined in the sections that follow. Section 1.1 provides an overview of the overall model framework. In contrast, Section 1.2 explains how the OSeMOSYS sets have been configured for the Ukrainian context, including the full range of commodities, technologies, and emissions accounted for. These elements are then combined to form the Reference Energy System (RES), which is introduced in Section 1.3 and subsequently examined in greater detail—sector by sector—in Section 1.4.</p>
+<section id="general-model-structure">
+<h2>1.1 General model structure<a class="headerlink" href="#general-model-structure" title="Link to this heading">¶</a></h2>
+<p>The overall model framework is illustrated in the following figure. Primary energy in Ukraine can be either extracted domestically or imported. The country’s energy system is characterised by a diverse resource base: significant nuclear capacity, domestic coal and natural gas, as well as growing contributions from renewables such as wind, solar, hydro, and biomass. Ukraine maintains substantial fossil fuel use, although its dependence on imports, especially natural gas, oil products, and coking coal, remains strategically important due to energy security concerns. Imported fuels and domestically produced energy are distributed across all sectors of the economy. The final energy demand of each sector is translated into energy service requirements within the model, enabling the identification of the cost-optimal technology mix to meet Ukraine’s needs.</p>
+<a class="reference internal image-reference" href="_images/general_structure.png"><img alt="Simplified Reference Energy System" src="_images/general_structure.png" style="width: 800px;" />
+</a>
+</section>
 <section id="model-configuration-sets">
 <h2>1.2 Model configuration - Sets<a class="headerlink" href="#model-configuration-sets" title="Link to this heading">¶</a></h2>
 <p>The  “sets” within the Ukraine WESM model define its overall structure, encompassing crucial details such as the model’s temporal and geographical scope. These sets also comprehensively list all the fuels, energy technologies, and types of emissions considered in the analysis.</p>
 <section id="region-and-years">
 <h3>Region and years<a class="headerlink" href="#region-and-years" title="Link to this heading">¶</a></h3>
-<p>The Ukraine WESM operates as a single-node national model, meaning it treats the entire country as one integrated energy system without explicitly modelling internal energy flows between different regions. Its time horizon spans from 2020 to 2050, with calculations performed in one-year increments. The initial period, specifically 2020 to 2022, is dedicated to model calibration, following the Energy Balance for Ukraine 2020.
-Timeslices
-———-
-Timeslices are how the model represents temporal variations within a single year. The Ukraine WESM employs 72 distinct timeslices, derived from combining 12 seasons (one for each month) and six specific time intervals throughout each day. This detailed temporal resolution allows for a nuanced capture of energy demand and supply fluctuations.</p>
+<p>The Ukraine WESM operates as a single-node national model, meaning it treats the entire country as one integrated energy system without explicitly modelling internal energy flows between different regions. Its time horizon spans from 2020 to 2050, with calculations performed in one-year increments. The initial period, specifically 2020 to 2022, is dedicated to model calibration, following the Energy Balance for Ukraine 2020.</p>
+</section>
+<section id="timeslices">
+<h3>Timeslices<a class="headerlink" href="#timeslices" title="Link to this heading">¶</a></h3>
+<p>Timeslices are how the model represents temporal variations within a single year. The Ukraine WESM employs 72 distinct timeslices, derived from combining 12 seasons (one for each month) and six specific time intervals throughout each day. This detailed temporal resolution allows for a nuanced capture of energy demand and supply fluctuations.</p>
 </section>
 <section id="fuels-commodities">
 <h3>Fuels/Commodities<a class="headerlink" href="#fuels-commodities" title="Link to this heading">¶</a></h3>
-<p>Fuels in the Ukraine WESM include all commodities represented in the model, whether primary or secondary. Both categories may be sourced domestically or imported. Ukraine possesses significant domestic resources, including coal, natural gas, hydroelectric power, biomass, solar energy, and wind energy, while still relying on imports of oil products and, historically, natural gas to meet its demand. Imported fuels can be used across multiple sectors and include crude oil, petroleum products (such as diesel, gasoline, jet fuel, LPG, kerosene, and heavy fuel oil), as well as natural gas. Locally, renewable-based secondary carriers such as bioethanol, biogas, and biomass-derived heat and power are considered. Electricity is generated from the country’s diverse mix of power plants—dominated by nuclear, hydro, coal, and an increasing share of renewables—and may also be exchanged through cross-border interconnectors with neighbouring European systems. To facilitate model analysis, sector-specific fuel categories are mapped to broader generic fuels via simplified “fuel-technology mix” (FTE) technologies. Finally, as in other OSeMOSYS applications, demands are represented as fuels, each identified by the prefix DEM.
-.. csv-table:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">:</span><span class="n">file</span><span class="p">:</span> <span class="o">./</span><span class="n">data</span><span class="o">/</span><span class="n">fuels</span><span class="o">.</span><span class="n">csv</span>
-<span class="p">:</span><span class="n">widths</span><span class="p">:</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">70</span>
-<span class="p">:</span><span class="n">header</span><span class="o">-</span><span class="n">rows</span><span class="p">:</span> <span class="mi">1</span>
-</pre></div>
-</div>
+<p>Fuels in the Ukraine WESM include all commodities represented in the model, whether primary or secondary. Both categories may be sourced domestically or imported. Ukraine possesses significant domestic resources, including coal, natural gas, hydroelectric power, biomass, solar energy, and wind energy, while still relying on imports of oil products and, historically, natural gas to meet its demand. Imported fuels can be used across multiple sectors and include crude oil, petroleum products (such as diesel, gasoline, jet fuel, LPG, kerosene, and heavy fuel oil), as well as natural gas. Locally, renewable-based secondary carriers such as bioethanol, biogas, and biomass-derived heat and power are considered. Electricity is generated from the country’s diverse mix of power plants—dominated by nuclear, hydro, coal, and an increasing share of renewables—and may also be exchanged through cross-border interconnectors with neighbouring European systems. To facilitate model analysis, sector-specific fuel categories are mapped to broader generic fuels via simplified “fuel-technology mix” (FTE) technologies. Finally, as in other OSeMOSYS applications, demands are represented as fuels, each identified by the prefix DEM.</p>
+<table class="docutils align-left">
+<colgroup>
+<col style="width: 30.0%" />
+<col style="width: 70.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Fuel/commodity</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>AGRBIO</p></td>
+<td><p>Agriculture biomass</p></td>
+</tr>
+<tr class="row-odd"><td><p>AGRCOA</p></td>
+<td><p>Agriculture coal</p></td>
+</tr>
+<tr class="row-even"><td><p>AGRELC</p></td>
+<td><p>Agriculture electricity</p></td>
+</tr>
+<tr class="row-odd"><td><p>AGRHET</p></td>
+<td><p>Agriculture heat</p></td>
+</tr>
+<tr class="row-even"><td><p>AGRNGS</p></td>
+<td><p>Agriculture ngs</p></td>
+</tr>
+<tr class="row-odd"><td><p>AGRPPP</p></td>
+<td><p>Agriculture petroleum products</p></td>
+</tr>
+<tr class="row-even"><td><p>BID</p></td>
+<td><p>Biodiesel</p></td>
+</tr>
+<tr class="row-odd"><td><p>BIO</p></td>
+<td><p>Mining bio</p></td>
+</tr>
+<tr class="row-even"><td><p>COA</p></td>
+<td><p>Mining coal</p></td>
+</tr>
+<tr class="row-odd"><td><p>COK</p></td>
+<td><p>Default commodity</p></td>
+</tr>
+<tr class="row-even"><td><p>COMBIO</p></td>
+<td><p>Commercial biomass</p></td>
+</tr>
+<tr class="row-odd"><td><p>COMCOA</p></td>
+<td><p>Commercial coal</p></td>
+</tr>
+<tr class="row-even"><td><p>COMCOP</p></td>
+<td><p>Commercial coal products</p></td>
+</tr>
+<tr class="row-odd"><td><p>COMELC</p></td>
+<td><p>Commercial electricity</p></td>
+</tr>
+<tr class="row-even"><td><p>COMHET</p></td>
+<td><p>Commercial heat</p></td>
+</tr>
+<tr class="row-odd"><td><p>COMLPG</p></td>
+<td><p>Commercial lpg</p></td>
+</tr>
+<tr class="row-even"><td><p>COMNGS</p></td>
+<td><p>Commercial ngs</p></td>
+</tr>
+<tr class="row-odd"><td><p>COP</p></td>
+<td><p>Coal Products</p></td>
+</tr>
+<tr class="row-even"><td><p>DEMABIO</p></td>
+<td><p>Demand agr biomass</p></td>
+</tr>
+<tr class="row-odd"><td><p>DEMACOA</p></td>
+<td><p>Demand agr coal</p></td>
+</tr>
+<tr class="row-even"><td><p>DEMAELC</p></td>
+<td><p>Demand agr electricity</p></td>
+</tr>
+<tr class="row-odd"><td><p>DEMAHEAT</p></td>
+<td><p>Demand agr heat</p></td>
+</tr>
+<tr class="row-even"><td><p>DEMANGS</p></td>
+<td><p>Demand agr ngs</p></td>
+</tr>
+<tr class="row-odd"><td><p>DEMAPPP</p></td>
+<td><p>Demand agr petroleum products</p></td>
+</tr>
+<tr class="row-even"><td><p>DEMCBIO</p></td>
+<td><p>Demand commercial and P serv biomass and waste</p></td>
+</tr>
+<tr class="row-odd"><td><p>DEMCCOA</p></td>
+<td><p>Demand commercial and P serv coal</p></td>
+</tr>
+<tr class="row-even"><td><p>DEMCCOP</p></td>
+<td><p>Demand commercial and P serv coal products</p></td>
+</tr>
+<tr class="row-odd"><td><p>DEMCELC</p></td>
+<td><p>Demand commercial and P serv electricity</p></td>
+</tr>
+<tr class="row-even"><td><p>DEMCHET</p></td>
+<td><p>Demand commercial and P serv heat</p></td>
+</tr>
+<tr class="row-odd"><td><p>DEMCLPG</p></td>
+<td><p>Demand commercial and P serv lpg</p></td>
+</tr>
+<tr class="row-even"><td><p>DEMCNGS</p></td>
+<td><p>Demand commercial and P serv ngs</p></td>
+</tr>
+<tr class="row-odd"><td><p>DEMFTR</p></td>
+<td><p>Demand freight transport btkm bus</p></td>
+</tr>
+<tr class="row-even"><td><p>DEMFTRNAV</p></td>
+<td><p>Demand freight transport btkm navi</p></td>
+</tr>
+<tr class="row-odd"><td><p>DEMFTRRAI</p></td>
+<td><p>Demand freight transport btkm rail</p></td>
+</tr>
+<tr class="row-even"><td><p>DEMIMMBIO</p></td>
+<td><p>Demand industry IMM biomass</p></td>
+</tr>
+<tr class="row-odd"><td><p>DEMIMMCOA</p></td>
+<td><p>Demand industry IMM coal</p></td>
+</tr>
+<tr class="row-even"><td><p>DEMIMMCOP</p></td>
+<td><p>Demand industry IMM coal prod</p></td>
+</tr>
+<tr class="row-odd"><td><p>DEMIMMELC</p></td>
+<td><p>Demand industry IMM electricity</p></td>
+</tr>
+<tr class="row-even"><td><p>DEMIMMHHET</p></td>
+<td><p>Demand industry IMM heat</p></td>
+</tr>
+<tr class="row-odd"><td><p>DEMIMMNGS</p></td>
+<td><p>Demand industry IMM ngs</p></td>
+</tr>
+<tr class="row-even"><td><p>DEMIMMPPP</p></td>
+<td><p>Demand industry IMM petroleum products</p></td>
+</tr>
+<tr class="row-odd"><td><p>DEMIOMBIO</p></td>
+<td><p>Demand industry IOM biomass</p></td>
+</tr>
+<tr class="row-even"><td><p>DEMIOMCOA</p></td>
+<td><p>Demand industry IOM coal</p></td>
+</tr>
+<tr class="row-odd"><td><p>DEMIOMCOP</p></td>
+<td><p>Demand industry IOM coal prod</p></td>
+</tr>
+<tr class="row-even"><td><p>DEMIOMELC</p></td>
+<td><p>Demand industry IOM electricity</p></td>
+</tr>
+<tr class="row-odd"><td><p>DEMIOMHET</p></td>
+<td><p>Demand industry IOM heat</p></td>
+</tr>
+<tr class="row-even"><td><p>DEMIOMNGS</p></td>
+<td><p>Demand industry IOM ngs</p></td>
+</tr>
+<tr class="row-odd"><td><p>DEMIOMPPP</p></td>
+<td><p>Demand industry IOM petroleum products</p></td>
+</tr>
+<tr class="row-even"><td><p>DEMIST</p></td>
+<td><p>Demand iron-steel MTpa</p></td>
+</tr>
+<tr class="row-odd"><td><p>DEMPTR</p></td>
+<td><p>Demand passenger transport bpkm car bus</p></td>
+</tr>
+<tr class="row-even"><td><p>DEMPTRNAV</p></td>
+<td><p>Demand passenger transport bpkm navi</p></td>
+</tr>
+<tr class="row-odd"><td><p>DEMPTRRAI</p></td>
+<td><p>Demand passenger transport bpkm rail</p></td>
+</tr>
+<tr class="row-even"><td><p>DEMRC1</p></td>
+<td><p>Demand - Residential - Cooling demand urban</p></td>
+</tr>
+<tr class="row-odd"><td><p>DEMRC2</p></td>
+<td><p>Demand - Residential - Cooling demand rural</p></td>
+</tr>
+<tr class="row-even"><td><p>DEMRK1</p></td>
+<td><p>Demand - Residential - Cooking urban</p></td>
+</tr>
+<tr class="row-odd"><td><p>DEMRK2</p></td>
+<td><p>Demand - Residential - Cooking rural</p></td>
+</tr>
+<tr class="row-even"><td><p>DEMRL1</p></td>
+<td><p>Demand - Residential - Lighting urban</p></td>
+</tr>
+<tr class="row-odd"><td><p>DEMRL2</p></td>
+<td><p>Demand - Residential - Lighting rural</p></td>
+</tr>
+<tr class="row-even"><td><p>DEMRO1</p></td>
+<td><p>Demand - Residential - heating and hot water urban</p></td>
+</tr>
+<tr class="row-odd"><td><p>DEMRO2</p></td>
+<td><p>Demand - Residential - heating and hot water rural</p></td>
+</tr>
+<tr class="row-even"><td><p>ELC001</p></td>
+<td><p>Electricity before T&amp;D</p></td>
+</tr>
+<tr class="row-odd"><td><p>ELC002</p></td>
+<td><p>Electricity after T&amp;D</p></td>
+</tr>
+<tr class="row-even"><td><p>ELCCOA</p></td>
+<td><p>Electricity coal</p></td>
+</tr>
+<tr class="row-odd"><td><p>ELCNGS</p></td>
+<td><p>Electricity ngs</p></td>
+</tr>
+<tr class="row-even"><td><p>ELCSYG</p></td>
+<td><p>Default commodity</p></td>
+</tr>
+<tr class="row-odd"><td><p>FTPSYG</p></td>
+<td><p>Syngas for ft plant</p></td>
+</tr>
+<tr class="row-even"><td><p>FTRBID</p></td>
+<td><p>Freight transport biodiesel</p></td>
+</tr>
+<tr class="row-odd"><td><p>FTRCOA</p></td>
+<td><p>Freight transport coal</p></td>
+</tr>
+<tr class="row-even"><td><p>FTRELC</p></td>
+<td><p>Freight transport electricity</p></td>
+</tr>
+<tr class="row-odd"><td><p>FTRNGS</p></td>
+<td><p>Freight transport ngs</p></td>
+</tr>
+<tr class="row-even"><td><p>FTRPPP</p></td>
+<td><p>Freight transport petroleum products</p></td>
+</tr>
+<tr class="row-odd"><td><p>H2</p></td>
+<td><p>H2</p></td>
+</tr>
+<tr class="row-even"><td><p>H2ELC</p></td>
+<td><p>Electricity for electrolyzers</p></td>
+</tr>
+<tr class="row-odd"><td><p>HET</p></td>
+<td><p>Heat</p></td>
+</tr>
+<tr class="row-even"><td><p>INDBIO</p></td>
+<td><p>Industry biomass</p></td>
+</tr>
+<tr class="row-odd"><td><p>INDCOA</p></td>
+<td><p>Industry coal</p></td>
+</tr>
+<tr class="row-even"><td><p>INDCOK</p></td>
+<td><p>Industry coking coal</p></td>
+</tr>
+<tr class="row-odd"><td><p>INDCOP</p></td>
+<td><p>Industry coal pro</p></td>
+</tr>
+<tr class="row-even"><td><p>INDELC</p></td>
+<td><p>Industry electricity</p></td>
+</tr>
+<tr class="row-odd"><td><p>INDHET</p></td>
+<td><p>Industry heat</p></td>
+</tr>
+<tr class="row-even"><td><p>INDNGS</p></td>
+<td><p>Industry ngs</p></td>
+</tr>
+<tr class="row-odd"><td><p>INDPPP</p></td>
+<td><p>Industry petroleum products</p></td>
+</tr>
+<tr class="row-even"><td><p>IOR</p></td>
+<td><p>Iron ore</p></td>
+</tr>
+<tr class="row-odd"><td><p>ISTBIO</p></td>
+<td><p>Biomass iron-steel</p></td>
+</tr>
+<tr class="row-even"><td><p>ISTCOA</p></td>
+<td><p>Coal iron-steel</p></td>
+</tr>
+<tr class="row-odd"><td><p>ISTCOK</p></td>
+<td><p>Coking coal iron-steel</p></td>
+</tr>
+<tr class="row-even"><td><p>ISTELC</p></td>
+<td><p>Electricity iron-steel</p></td>
+</tr>
+<tr class="row-odd"><td><p>ISTH2</p></td>
+<td><p>H2 iron-steel 1E6 Kg</p></td>
+</tr>
+<tr class="row-even"><td><p>ISTHET</p></td>
+<td><p>Heat iron-steel</p></td>
+</tr>
+<tr class="row-odd"><td><p>ISTIOR</p></td>
+<td><p>Iron ore iron-steel</p></td>
+</tr>
+<tr class="row-even"><td><p>ISTNGS</p></td>
+<td><p>NGS iron-steel</p></td>
+</tr>
+<tr class="row-odd"><td><p>ISTPPP</p></td>
+<td><p>Petroleum products iron-steel</p></td>
+</tr>
+<tr class="row-even"><td><p>ISTSCR</p></td>
+<td><p>Scrap metal iron-steel</p></td>
+</tr>
+<tr class="row-odd"><td><p>LCFBIO</p></td>
+<td><p>Biomas for low carbon fuels</p></td>
+</tr>
+<tr class="row-even"><td><p>LPG</p></td>
+<td><p>Mining lpg</p></td>
+</tr>
+<tr class="row-odd"><td><p>MTHSYG</p></td>
+<td><p>Syngas for methanation plant</p></td>
+</tr>
+<tr class="row-even"><td><p>NGS</p></td>
+<td><p>Mining ngs</p></td>
+</tr>
+<tr class="row-odd"><td><p>NUC</p></td>
+<td><p>Default commodity</p></td>
+</tr>
+<tr class="row-even"><td><p>PPP</p></td>
+<td><p>Petroleum products</p></td>
+</tr>
+<tr class="row-odd"><td><p>PTRBID</p></td>
+<td><p>Passenger Transport biodiesel</p></td>
+</tr>
+<tr class="row-even"><td><p>PTRCOA</p></td>
+<td><p>Passenger Transport coal</p></td>
+</tr>
+<tr class="row-odd"><td><p>PTRELC</p></td>
+<td><p>Default commodity</p></td>
+</tr>
+<tr class="row-even"><td><p>PTRNGS</p></td>
+<td><p>Passenger Transport ngs</p></td>
+</tr>
+<tr class="row-odd"><td><p>PTRPPP</p></td>
+<td><p>Passenger Transport petroleum products diesel</p></td>
+</tr>
+<tr class="row-even"><td><p>RESBIO</p></td>
+<td><p>Residential bio</p></td>
+</tr>
+<tr class="row-odd"><td><p>RESCOA</p></td>
+<td><p>Residential coal</p></td>
+</tr>
+<tr class="row-even"><td><p>RESELC</p></td>
+<td><p>Residential electricity</p></td>
+</tr>
+<tr class="row-odd"><td><p>RESLPG</p></td>
+<td><p>Residential lpg</p></td>
+</tr>
+<tr class="row-even"><td><p>RESNGS</p></td>
+<td><p>Residential ngs</p></td>
+</tr>
+<tr class="row-odd"><td><p>SCR</p></td>
+<td><p>Scrap metal</p></td>
+</tr>
+<tr class="row-even"><td><p>SYG</p></td>
+<td><p>Syngas</p></td>
+</tr>
+</tbody>
+</table>
 </section>
 <section id="technologies-and-modes-of-operation">
 <h3>Technologies and modes of operation<a class="headerlink" href="#technologies-and-modes-of-operation" title="Link to this heading">¶</a></h3>
-<p>All technologies included in the Ukraine WESM are organised within the technologies set. Imported fuels and resources (IMP) and domestic resources (MIN) are characterised by technologies that generate only an output fuel. The power sector is modelled at an individual power plant level (ELC technologies), reflecting the diversity of Ukraine’s generation mix, which includes nuclear, thermal, hydro, and renewable assets. Transmission and distribution (T_D) networks are represented by a single technology to capture system-level losses. Each end-use sector is connected to the energy system through fuel-technology mix (FTE) technologies, one for each fuel available within that sector. These FTEs facilitate the post-processing of model results while also enabling the representation of sector-specific costs and efficiencies that are not directly embedded in the technology definitions. Beyond this, each sector features its own dedicated technologies—identified with sector-specific prefixes—that transform the available fuels into useful energy services (e.g., transport mobility, industrial heat, residential heating, etc.). For the present modelling framework, only one operating mode is assigned per technology.
-.. csv-table:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">:</span><span class="n">file</span><span class="p">:</span> <span class="o">./</span><span class="n">data</span><span class="o">/</span><span class="n">technologies</span><span class="o">.</span><span class="n">csv</span>
-<span class="p">:</span><span class="n">widths</span><span class="p">:</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">70</span>
-<span class="p">:</span><span class="n">header</span><span class="o">-</span><span class="n">rows</span><span class="p">:</span> <span class="mi">1</span>
-</pre></div>
-</div>
+<p>All technologies included in the Ukraine WESM are organised within the technologies set. Imported fuels and resources (IMP) and domestic resources (MIN) are characterised by technologies that generate only an output fuel. The power sector is modelled at an individual power plant level (ELC technologies), reflecting the diversity of Ukraine’s generation mix, which includes nuclear, thermal, hydro, and renewable assets. Transmission and distribution (T_D) networks are represented by a single technology to capture system-level losses. Each end-use sector is connected to the energy system through fuel-technology mix (FTE) technologies, one for each fuel available within that sector. These FTEs facilitate the post-processing of model results while also enabling the representation of sector-specific costs and efficiencies that are not directly embedded in the technology definitions. Beyond this, each sector features its own dedicated technologies—identified with sector-specific prefixes—that transform the available fuels into useful energy services (e.g., transport mobility, industrial heat, residential heating, etc.). For the present modelling framework, only one operating mode is assigned per technology.</p>
+<table class="docutils align-left">
+<colgroup>
+<col style="width: 30.0%" />
+<col style="width: 70.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Technology</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>ABIO</p></td>
+<td><p>Agr biomass</p></td>
+</tr>
+<tr class="row-odd"><td><p>ACOA</p></td>
+<td><p>Agr coal</p></td>
+</tr>
+<tr class="row-even"><td><p>AELC</p></td>
+<td><p>Agr electricity</p></td>
+</tr>
+<tr class="row-odd"><td><p>AHET</p></td>
+<td><p>Agr heat</p></td>
+</tr>
+<tr class="row-even"><td><p>ANGS</p></td>
+<td><p>Agr ngs</p></td>
+</tr>
+<tr class="row-odd"><td><p>APPP</p></td>
+<td><p>Agr petroleum products</p></td>
+</tr>
+<tr class="row-even"><td><p>CBIO</p></td>
+<td><p>Com and P sector demand bio</p></td>
+</tr>
+<tr class="row-odd"><td><p>CCOA</p></td>
+<td><p>Com and P sector demand coal</p></td>
+</tr>
+<tr class="row-even"><td><p>CCOP</p></td>
+<td><p>Com and P sector demand coal pr.</p></td>
+</tr>
+<tr class="row-odd"><td><p>CELC</p></td>
+<td><p>Com and P sector demand electri.</p></td>
+</tr>
+<tr class="row-even"><td><p>CHET</p></td>
+<td><p>Com and P sector demand heat</p></td>
+</tr>
+<tr class="row-odd"><td><p>CLPG</p></td>
+<td><p>Com and P sector demand lpg</p></td>
+</tr>
+<tr class="row-even"><td><p>CNGS</p></td>
+<td><p>Com and P sector demand ngs</p></td>
+</tr>
+<tr class="row-odd"><td><p>ELCCECHR</p></td>
+<td><p>Powert Plant CHP ngs</p></td>
+</tr>
+<tr class="row-even"><td><p>ELCCOMSOL</p></td>
+<td><p>Solar PV commercial</p></td>
+</tr>
+<tr class="row-odd"><td><p>ELCIGCC</p></td>
+<td><p>Integrated Gasification Combined.</p></td>
+</tr>
+<tr class="row-even"><td><p>ELCNENUCK1</p></td>
+<td><p>Power Plants Existing - Nuclear Energy - Khmelnitsk 1</p></td>
+</tr>
+<tr class="row-odd"><td><p>ELCNENUCK2</p></td>
+<td><p>Power Plants Existing - Nuclear Energy - Khmelnitsk 2</p></td>
+</tr>
+<tr class="row-even"><td><p>ELCNENUCK3</p></td>
+<td><p>Unit 3 at the Khmelnytska NPP</p></td>
+</tr>
+<tr class="row-odd"><td><p>ELCNENUCK4</p></td>
+<td><p>Unit 4 at the Khmelnytska NPP</p></td>
+</tr>
+<tr class="row-even"><td><p>ELCNENUCR1</p></td>
+<td><p>Power Plants Existing - Nuclear Energy - Rivne 1</p></td>
+</tr>
+<tr class="row-odd"><td><p>ELCNENUCR2</p></td>
+<td><p>Power Plants Existing - Nuclear Energy - Rivne 2</p></td>
+</tr>
+<tr class="row-even"><td><p>ELCNENUCR3</p></td>
+<td><p>Power Plants Existing - Nuclear Energy - Rivne 3</p></td>
+</tr>
+<tr class="row-odd"><td><p>ELCNENUCR4</p></td>
+<td><p>Power Plants Existing - Nuclear Energy - Rivne 4</p></td>
+</tr>
+<tr class="row-even"><td><p>ELCNENUCY1</p></td>
+<td><p>Power Plants Existing - Nuclear Energy - Yuzhnoukrainsk 1</p></td>
+</tr>
+<tr class="row-odd"><td><p>ELCNENUCY2</p></td>
+<td><p>Power Plants Existing - Nuclear Energy - Yuzhnoukrainsk 2</p></td>
+</tr>
+<tr class="row-even"><td><p>ELCNENUCY3</p></td>
+<td><p>Power Plants Existing - Nuclear Energy - Yuzhnoukrainsk 3</p></td>
+</tr>
+<tr class="row-odd"><td><p>ELCNENUCZ1</p></td>
+<td><p>Power Plants Existing - Nuclear Energy - Zaporizzhya 1</p></td>
+</tr>
+<tr class="row-even"><td><p>ELCNENUCZ2</p></td>
+<td><p>Power Plants Existing - Nuclear Energy - Zaporizzhya 2</p></td>
+</tr>
+<tr class="row-odd"><td><p>ELCNENUCZ3</p></td>
+<td><p>Power Plants Existing - Nuclear Energy - Zaporizzhya 3</p></td>
+</tr>
+<tr class="row-even"><td><p>ELCNENUCZ4</p></td>
+<td><p>Power Plants Existing - Nuclear Energy - Zaporizzhya 4</p></td>
+</tr>
+<tr class="row-odd"><td><p>ELCNENUCZ5</p></td>
+<td><p>Power Plants Existing - Nuclear Energy - Zaporizzhya 5</p></td>
+</tr>
+<tr class="row-even"><td><p>ELCNENUCZ6</p></td>
+<td><p>Power Plants Existing - Nuclear Energy - Zaporizzhya 6</p></td>
+</tr>
+<tr class="row-odd"><td><p>ELCNEWNUC</p></td>
+<td><p>New nuclear power plants</p></td>
+</tr>
+<tr class="row-even"><td><p>ELCREBIO00</p></td>
+<td><p>Power Plants Existing00 - Biomass</p></td>
+</tr>
+<tr class="row-odd"><td><p>ELCREGEO00</p></td>
+<td><p>Geothermal power plants</p></td>
+</tr>
+<tr class="row-even"><td><p>ELCREHYDPSKY1</p></td>
+<td><p>Power Plants Existing - Hydro Energy - Pumped storage power - Kyivska 1</p></td>
+</tr>
+<tr class="row-odd"><td><p>ELCREHYDPSDS1</p></td>
+<td><p>Power Plants Existing - Hydro Energy - Pumped storage power - Dnistrovska 1</p></td>
+</tr>
+<tr class="row-even"><td><p>ELCREHYDHPSD1</p></td>
+<td><p>Power Plants Existing - Hydro Energy - Hydro power - Seredniodniprovska 1</p></td>
+</tr>
+<tr class="row-odd"><td><p>ELCREHYDHPKY1</p></td>
+<td><p>Power Plants Existing - Hydro Energy - Hydro power - Kyivska 1</p></td>
+</tr>
+<tr class="row-even"><td><p>ELCREHYDHPKR1</p></td>
+<td><p>Power Plants Existing - Hydro Energy - Hydro power - Kremenchucka 1</p></td>
+</tr>
+<tr class="row-odd"><td><p>ELCREHYDHPKH1</p></td>
+<td><p>Power Plants Existing - Hydro Energy - Hydro power - Kahovska 1</p></td>
+</tr>
+<tr class="row-even"><td><p>ELCREHYDHPKA1</p></td>
+<td><p>Power Plants Existing - Hydro Energy - Hydro power - Kanivska 1</p></td>
+</tr>
+<tr class="row-odd"><td><p>ELCREHYDHPDS1</p></td>
+<td><p>Power Plants Existing - Hydro Energy - Hydro power - Dnistrovska 1</p></td>
+</tr>
+<tr class="row-even"><td><p>ELCREHYDHPDP1</p></td>
+<td><p>Power Plants Existing - Hydro Energy - Hydro power - Dniprovska 1&amp;2</p></td>
+</tr>
+<tr class="row-odd"><td><p>ELCRESOL00</p></td>
+<td><p>Power Plants Existing00 - Solar e.</p></td>
+</tr>
+<tr class="row-even"><td><p>ELCRESSOL</p></td>
+<td><p>Solar PV residential</p></td>
+</tr>
+<tr class="row-odd"><td><p>ELCREWIN00</p></td>
+<td><p>Power Plants Existing00 - Wind e.</p></td>
+</tr>
+<tr class="row-even"><td><p>ELCTECHR00</p></td>
+<td><p>Power Plants Existing00 - Solid F.</p></td>
+</tr>
+<tr class="row-odd"><td><p>ELCTEGAS00</p></td>
+<td><p>Power Plants Existing00 - Natura.</p></td>
+</tr>
+<tr class="row-even"><td><p>FTEAGRBIO</p></td>
+<td><p>Agriculture biomass</p></td>
+</tr>
+<tr class="row-odd"><td><p>FTEAGRCOA</p></td>
+<td><p>Agriculture coal</p></td>
+</tr>
+<tr class="row-even"><td><p>FTEAGRELC</p></td>
+<td><p>Agriculture electricity</p></td>
+</tr>
+<tr class="row-odd"><td><p>FTEAGRHET</p></td>
+<td><p>Agriculture heat</p></td>
+</tr>
+<tr class="row-even"><td><p>FTEAGRNGS</p></td>
+<td><p>Agriculture ngs</p></td>
+</tr>
+<tr class="row-odd"><td><p>FTEAGRPPP</p></td>
+<td><p>Agriculture petroleum</p></td>
+</tr>
+<tr class="row-even"><td><p>FTECOMBIO</p></td>
+<td><p>Com and P Sector bio and residues</p></td>
+</tr>
+<tr class="row-odd"><td><p>FTECOMCOA</p></td>
+<td><p>Com and P Sector coal</p></td>
+</tr>
+<tr class="row-even"><td><p>FTECOMCOP</p></td>
+<td><p>Com and P Sector coal prod</p></td>
+</tr>
+<tr class="row-odd"><td><p>FTECOMELC</p></td>
+<td><p>Com and P Sector electricity</p></td>
+</tr>
+<tr class="row-even"><td><p>FTECOMHET</p></td>
+<td><p>Com and P Sector heat</p></td>
+</tr>
+<tr class="row-odd"><td><p>FTECOMLPG</p></td>
+<td><p>Com and P Sector lpg</p></td>
+</tr>
+<tr class="row-even"><td><p>FTECOMNGS</p></td>
+<td><p>Com and P Sector ngs</p></td>
+</tr>
+<tr class="row-odd"><td><p>FTEELCCOA</p></td>
+<td><p>Electricity coal</p></td>
+</tr>
+<tr class="row-even"><td><p>FTEELCNGS</p></td>
+<td><p>Electricity ngs</p></td>
+</tr>
+<tr class="row-odd"><td><p>FTEELCSYG</p></td>
+<td><p>Syngas for electricity</p></td>
+</tr>
+<tr class="row-even"><td><p>FTEFTPSYG</p></td>
+<td><p>Syngas FT plant</p></td>
+</tr>
+<tr class="row-odd"><td><p>FTEFTRBID</p></td>
+<td><p>FTR biodiesel</p></td>
+</tr>
+<tr class="row-even"><td><p>FTEFTRCOA</p></td>
+<td><p>FTR coal</p></td>
+</tr>
+<tr class="row-odd"><td><p>FTEFTRELC</p></td>
+<td><p>FTR electricity</p></td>
+</tr>
+<tr class="row-even"><td><p>FTEFTRNGS</p></td>
+<td><p>FTR ngs</p></td>
+</tr>
+<tr class="row-odd"><td><p>FTEFTRPPP</p></td>
+<td><p>FTR petroleum products diesel</p></td>
+</tr>
+<tr class="row-even"><td><p>FTEH2ELC</p></td>
+<td><p>Electricity for electrolyzers</p></td>
+</tr>
+<tr class="row-odd"><td><p>FTEINDBIO</p></td>
+<td><p>Industry biomass</p></td>
+</tr>
+<tr class="row-even"><td><p>FTEINDCOK</p></td>
+<td><p>Industry coking coal</p></td>
+</tr>
+<tr class="row-odd"><td><p>FTEINDCOP</p></td>
+<td><p>Industry coal products</p></td>
+</tr>
+<tr class="row-even"><td><p>FTEINDELC</p></td>
+<td><p>Industry electricity</p></td>
+</tr>
+<tr class="row-odd"><td><p>FTEINDHET</p></td>
+<td><p>Industry heat</p></td>
+</tr>
+<tr class="row-even"><td><p>FTEINDNGS</p></td>
+<td><p>Industry ngs</p></td>
+</tr>
+<tr class="row-odd"><td><p>FTEINDPPP</p></td>
+<td><p>Industry petroleum prod</p></td>
+</tr>
+<tr class="row-even"><td><p>FTEISTBIO</p></td>
+<td><p>Bio iron-steel</p></td>
+</tr>
+<tr class="row-odd"><td><p>FTEISTCOA</p></td>
+<td><p>Coa iron-steel</p></td>
+</tr>
+<tr class="row-even"><td><p>FTEISTCOK</p></td>
+<td><p>Coking coal iron-steel</p></td>
+</tr>
+<tr class="row-odd"><td><p>FTEISTELC</p></td>
+<td><p>Elc iron-steel</p></td>
+</tr>
+<tr class="row-even"><td><p>FTEISTHET</p></td>
+<td><p>Heat iron-steel</p></td>
+</tr>
+<tr class="row-odd"><td><p>FTEISTIOR</p></td>
+<td><p>Iron ore iron-steel</p></td>
+</tr>
+<tr class="row-even"><td><p>FTEISTNGS</p></td>
+<td><p>NGS iron-steel</p></td>
+</tr>
+<tr class="row-odd"><td><p>FTEISTPPP</p></td>
+<td><p>Petroleum prod iron-steel</p></td>
+</tr>
+<tr class="row-even"><td><p>FTEISTSCR</p></td>
+<td><p>Metal scrap iron-steel</p></td>
+</tr>
+<tr class="row-odd"><td><p>FTELCFBIO</p></td>
+<td><p>Low carbon fuels biomass</p></td>
+</tr>
+<tr class="row-even"><td><p>FTEMTHSYG</p></td>
+<td><p>Syngas methanation plant</p></td>
+</tr>
+<tr class="row-odd"><td><p>FTEPTRBID</p></td>
+<td><p>PTR biodiesel</p></td>
+</tr>
+<tr class="row-even"><td><p>FTEPTRCOA</p></td>
+<td><p>PTR coal</p></td>
+</tr>
+<tr class="row-odd"><td><p>FTEPTRELC</p></td>
+<td><p>PTR electricity</p></td>
+</tr>
+<tr class="row-even"><td><p>FTEPTRNGS</p></td>
+<td><p>PTR ngs</p></td>
+</tr>
+<tr class="row-odd"><td><p>FTEPTRPPP</p></td>
+<td><p>PTR petroleum products diesel</p></td>
+</tr>
+<tr class="row-even"><td><p>FTERESBIO</p></td>
+<td><p>Residential bio</p></td>
+</tr>
+<tr class="row-odd"><td><p>FTERESCOA</p></td>
+<td><p>Residential coal</p></td>
+</tr>
+<tr class="row-even"><td><p>FTERESELC</p></td>
+<td><p>Residential electricity</p></td>
+</tr>
+<tr class="row-odd"><td><p>FTERESLPG</p></td>
+<td><p>Residential lpg</p></td>
+</tr>
+<tr class="row-even"><td><p>FTERESNGS</p></td>
+<td><p>Residential ngs</p></td>
+</tr>
+<tr class="row-odd"><td><p>FTETINDCOA</p></td>
+<td><p>Industry coal</p></td>
+</tr>
+<tr class="row-even"><td><p>FTPLANT</p></td>
+<td><p>Fischer-Tropsch (FT)</p></td>
+</tr>
+<tr class="row-odd"><td><p>FTRABUBID</p></td>
+<td><p>FTR truck petroleum biodiesel</p></td>
+</tr>
+<tr class="row-even"><td><p>FTRABUNGS</p></td>
+<td><p>FTR truck ngs</p></td>
+</tr>
+<tr class="row-odd"><td><p>FTRABUPPP</p></td>
+<td><p>FTR truck petroleum products</p></td>
+</tr>
+<tr class="row-even"><td><p>FTRNAVPPP</p></td>
+<td><p>FTR navigation petroleum products</p></td>
+</tr>
+<tr class="row-odd"><td><p>FTRRAICOA</p></td>
+<td><p>FTR rail coal</p></td>
+</tr>
+<tr class="row-even"><td><p>FTRRAIELC</p></td>
+<td><p>FTR rail electricity</p></td>
+</tr>
+<tr class="row-odd"><td><p>FTRRAIPPP</p></td>
+<td><p>FTR rail petroleum products</p></td>
+</tr>
+<tr class="row-even"><td><p>GSFR</p></td>
+<td><p>Gasifier</p></td>
+</tr>
+<tr class="row-odd"><td><p>HETREBIO</p></td>
+<td><p>Heat plants biomass</p></td>
+</tr>
+<tr class="row-even"><td><p>HETRECOA</p></td>
+<td><p>Heat plants coal</p></td>
+</tr>
+<tr class="row-odd"><td><p>HETRECOP</p></td>
+<td><p>Heat plants coal products</p></td>
+</tr>
+<tr class="row-even"><td><p>HETRENGS</p></td>
+<td><p>Heat plants ngs</p></td>
+</tr>
+<tr class="row-odd"><td><p>HETREOIL</p></td>
+<td><p>Heat plants oil</p></td>
+</tr>
+<tr class="row-even"><td><p>HETREPPP</p></td>
+<td><p>Heat plants petroleum products</p></td>
+</tr>
+<tr class="row-odd"><td><p>IMMBIO</p></td>
+<td><p>Ind IMM biomass</p></td>
+</tr>
+<tr class="row-even"><td><p>IMMCOA</p></td>
+<td><p>Ind IMM coal</p></td>
+</tr>
+<tr class="row-odd"><td><p>IMMCOP</p></td>
+<td><p>Ind IMM coal products</p></td>
+</tr>
+<tr class="row-even"><td><p>IMMELC</p></td>
+<td><p>Ind IMM electricity</p></td>
+</tr>
+<tr class="row-odd"><td><p>IMMHET</p></td>
+<td><p>Ind IMM heat</p></td>
+</tr>
+<tr class="row-even"><td><p>IMMNGS</p></td>
+<td><p>Ind IMM ngs</p></td>
+</tr>
+<tr class="row-odd"><td><p>IMPCOA</p></td>
+<td><p>Import coal steam</p></td>
+</tr>
+<tr class="row-even"><td><p>IMPCOK</p></td>
+<td><p>Import cooking coal industry</p></td>
+</tr>
+<tr class="row-odd"><td><p>IMPELC</p></td>
+<td><p>Import Electricity</p></td>
+</tr>
+<tr class="row-even"><td><p>IMPPP</p></td>
+<td><p>Ind IMM petroleum products</p></td>
+</tr>
+<tr class="row-odd"><td><p>IOMBIO</p></td>
+<td><p>Ind IOM biomass</p></td>
+</tr>
+<tr class="row-even"><td><p>IOMCOA</p></td>
+<td><p>Ind IOM coal</p></td>
+</tr>
+<tr class="row-odd"><td><p>IOMCOP</p></td>
+<td><p>Ind IOM coal products</p></td>
+</tr>
+<tr class="row-even"><td><p>IOMELC</p></td>
+<td><p>Ind IOM electricity</p></td>
+</tr>
+<tr class="row-odd"><td><p>IOMHET</p></td>
+<td><p>Ind IOM heat</p></td>
+</tr>
+<tr class="row-even"><td><p>IOMNGS</p></td>
+<td><p>Ind IOM ngs</p></td>
+</tr>
+<tr class="row-odd"><td><p>IOMPPP</p></td>
+<td><p>Ind IOM petroleum products</p></td>
+</tr>
+<tr class="row-even"><td><p>ISTBFBOF</p></td>
+<td><p>Blast Furnace-Basic Oxygen Fur.</p></td>
+</tr>
+<tr class="row-odd"><td><p>ISTCCSBF</p></td>
+<td><p>Blast Furnace-Basic Oxygen Fur.</p></td>
+</tr>
+<tr class="row-even"><td><p>ISTDRIH2</p></td>
+<td><p>Direct Reduced Iron H2</p></td>
+</tr>
+<tr class="row-odd"><td><p>ISTDRINGS</p></td>
+<td><p>Direct Reduced Iron using NGS</p></td>
+</tr>
+<tr class="row-even"><td><p>ISTEAF</p></td>
+<td><p>Electric arc furnace</p></td>
+</tr>
+<tr class="row-odd"><td><p>ISTELCH2</p></td>
+<td><p>Electrolyser</p></td>
+</tr>
+<tr class="row-even"><td><p>MINBID</p></td>
+<td><p>Mining Biodiesel</p></td>
+</tr>
+<tr class="row-odd"><td><p>MINBIO</p></td>
+<td><p>Mining bio</p></td>
+</tr>
+<tr class="row-even"><td><p>MINCOA</p></td>
+<td><p>Mining coal</p></td>
+</tr>
+<tr class="row-odd"><td><p>MINCOP</p></td>
+<td><p>Coal products</p></td>
+</tr>
+<tr class="row-even"><td><p>MINIOR</p></td>
+<td><p>Mining iron ore</p></td>
+</tr>
+<tr class="row-odd"><td><p>MINLPG</p></td>
+<td><p>Mining lpg</p></td>
+</tr>
+<tr class="row-even"><td><p>MINNGS</p></td>
+<td><p>Mining ngs</p></td>
+</tr>
+<tr class="row-odd"><td><p>MINNUC</p></td>
+<td><p>Nuclear fuel</p></td>
+</tr>
+<tr class="row-even"><td><p>MINPPP</p></td>
+<td><p>Mining petroleum petroducts</p></td>
+</tr>
+<tr class="row-odd"><td><p>MINSCR</p></td>
+<td><p>Mining metal scrap</p></td>
+</tr>
+<tr class="row-even"><td><p>MTHPLANT</p></td>
+<td><p>Syngas_Methanation Plant</p></td>
+</tr>
+<tr class="row-odd"><td><p>PEMH2</p></td>
+<td><p>PEM electrolyser</p></td>
+</tr>
+<tr class="row-even"><td><p>PTRABUBID</p></td>
+<td><p>PTR buses-auto biodiesel</p></td>
+</tr>
+<tr class="row-odd"><td><p>PTRABUNGS</p></td>
+<td><p>PTR buses-auto ngs</p></td>
+</tr>
+<tr class="row-even"><td><p>PTRABUPPP</p></td>
+<td><p>PTR buses-auto petroleum prod</p></td>
+</tr>
+<tr class="row-odd"><td><p>PTRNAVPPP</p></td>
+<td><p>PTR navigation petroleum prod</p></td>
+</tr>
+<tr class="row-even"><td><p>PTRRAICOA</p></td>
+<td><p>PTR rail coal</p></td>
+</tr>
+<tr class="row-odd"><td><p>PTRRAIELC</p></td>
+<td><p>PTR rail electricity</p></td>
+</tr>
+<tr class="row-even"><td><p>PTRRAIPPP</p></td>
+<td><p>PTR rail petroleum prod</p></td>
+</tr>
+<tr class="row-odd"><td><p>RC1ELC001</p></td>
+<td><p>Cooling electric urban</p></td>
+</tr>
+<tr class="row-even"><td><p>RC2ELC001</p></td>
+<td><p>Cooling electric rural</p></td>
+</tr>
+<tr class="row-odd"><td><p>RK1BIO001</p></td>
+<td><p>Stove bio urban</p></td>
+</tr>
+<tr class="row-even"><td><p>RK1COA001</p></td>
+<td><p>Stove coal urban</p></td>
+</tr>
+<tr class="row-odd"><td><p>RK1ELC001</p></td>
+<td><p>Stove electricity urban</p></td>
+</tr>
+<tr class="row-even"><td><p>RK1LPG001</p></td>
+<td><p>Stove lpg urban</p></td>
+</tr>
+<tr class="row-odd"><td><p>RK1NGS001</p></td>
+<td><p>Stove ngs urban</p></td>
+</tr>
+<tr class="row-even"><td><p>RK2BIO001</p></td>
+<td><p>Stove bio rural</p></td>
+</tr>
+<tr class="row-odd"><td><p>RK2COA001</p></td>
+<td><p>Stove coal rural</p></td>
+</tr>
+<tr class="row-even"><td><p>RK2ELC001</p></td>
+<td><p>Stove electricity rural</p></td>
+</tr>
+<tr class="row-odd"><td><p>RK2LPG001</p></td>
+<td><p>Stove lpg rural</p></td>
+</tr>
+<tr class="row-even"><td><p>RK2NGS001</p></td>
+<td><p>Stove ngs rural</p></td>
+</tr>
+<tr class="row-odd"><td><p>RL1ELC001</p></td>
+<td><p>Residential - Lighting urban - Ele.</p></td>
+</tr>
+<tr class="row-even"><td><p>RL2ELC001</p></td>
+<td><p>Residential - Lighting rural - Elect.</p></td>
+</tr>
+<tr class="row-odd"><td><p>RO1BIO001</p></td>
+<td><p>Residential-Heating urban - bio</p></td>
+</tr>
+<tr class="row-even"><td><p>RO1COA001</p></td>
+<td><p>Residential-Heating urban - Coal</p></td>
+</tr>
+<tr class="row-odd"><td><p>RO1ELC001</p></td>
+<td><p>Residential-Heating urban - Elect.</p></td>
+</tr>
+<tr class="row-even"><td><p>RO1HET001</p></td>
+<td><p>Residential-Heating urban - Heat</p></td>
+</tr>
+<tr class="row-odd"><td><p>RO1NGS001</p></td>
+<td><p>Residential-Heating urban - NGS</p></td>
+</tr>
+<tr class="row-even"><td><p>RO1OIP001</p></td>
+<td><p>Residential-Heating urban - LPG</p></td>
+</tr>
+<tr class="row-odd"><td><p>RO2BIO001</p></td>
+<td><p>Residential-Heating rural - BIO</p></td>
+</tr>
+<tr class="row-even"><td><p>RO2COA001</p></td>
+<td><p>Residential-Heating rural -Coal</p></td>
+</tr>
+<tr class="row-odd"><td><p>RO2ELC001</p></td>
+<td><p>Residential-Heating rural - ELC</p></td>
+</tr>
+<tr class="row-even"><td><p>RO2HET001</p></td>
+<td><p>Residential-Heating rural - Heat</p></td>
+</tr>
+<tr class="row-odd"><td><p>RO2NGS001</p></td>
+<td><p>Residential-Heating rural - NGS</p></td>
+</tr>
+<tr class="row-even"><td><p>RO2OIP001</p></td>
+<td><p>Residential-Heating rural -LPG</p></td>
+</tr>
+<tr class="row-odd"><td><p>T_D</p></td>
+<td><p>T&amp;D</p></td>
+</tr>
+</tbody>
+</table>
 </section>
 <section id="emissions">
 <h3>Emissions<a class="headerlink" href="#emissions" title="Link to this heading">¶</a></h3>
 <p>The current version of the Ukraine WESM explicitly tracks only CO<sub>2</sub> emissions. The emissions set includes both a generic CO<sub>2</sub> category applicable across the entire energy system, as well as sector-specific CO<sub>2</sub> entries that allow emissions to be attributed to particular end-use sectors.</p>
+<table class="docutils align-left">
+<colgroup>
+<col style="width: 30.0%" />
+<col style="width: 70.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Emissions</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>CO2</p></td>
+<td><p>Overall carbon dioxide emissions</p></td>
+</tr>
+</tbody>
+</table>
 </section>
 </section>
 <section id="reference-energy-system">
 <h2>1.3 Reference energy system<a class="headerlink" href="#reference-energy-system" title="Link to this heading">¶</a></h2>
 <p>An overview of the complete reference energy system (RES) for Ukraine is shown in the following figure. Beginning on the left, each block represents one or more technologies, depending on whether the associated commodity is domestically produced or imported. The bottom part of the diagram illustrates the power sector (ELC technologies). Each block can correspond to as many as thirty-four individual power plants, since generation in the model is represented at the single-plant level for nuclear power plants and at the global level for other power plants, such as coal and natural gas. Electricity imports are modelled at the transmission stage. At the same time, distribution to the end‑use sectors occurs after both transmission/distribution grids (T_D), with system losses incorporated. Below the uranium production section, other fuels that are consumed directly in end-use sectors are listed, alongside downstream conversion processes such as biomass-to-syngas, which generate secondary fuels. Each end-use sector is represented separately, bounded by the fuel-technology mix (FTE) technologies, and includes its own sector-specific fuels, technologies, and final energy service demands.</p>
-<a class="reference internal image-reference" href="img/wesm_res.svg"><img alt="Reference energy system" src="img/wesm_res.svg" style="width: 1200px;" />
+<a class="reference internal image-reference" href="_images/wesm_res.png"><img alt="Reference energy system" src="_images/wesm_res.png" style="width: 1000px;" />
 </a>
 </section>
 <section id="sectors">
@@ -95,27 +1120,27 @@ Timeslices are how the model represents temporal variations within a single year
 <section id="agriculture">
 <h3>Agriculture<a class="headerlink" href="#agriculture" title="Link to this heading">¶</a></h3>
 <p>The Ukraine WESM features a more detailed representation of agricultural energy use, with distinct demand categories for coal, petroleum products, natural gas, biomass, electricity, and heat. Each fuel type is linked to corresponding technologies that supply the sector, enabling a more comprehensive analysis of Ukraine’s agricultural energy mix and its potential transition pathways.</p>
-<a class="reference internal image-reference" href="img/wesm_agriculture.svg"><img alt="Agricultural sector" src="img/wesm_agriculture.svg" style="width: 1200px;" />
+<a class="reference internal image-reference" href="_images/wesm_agriculture.png"><img alt="Agricultural sector" src="_images/wesm_agriculture.png" style="width: 1000px;" />
 </a>
 </section>
 <section id="commercial-sector">
 <h3>Commercial sector<a class="headerlink" href="#commercial-sector" title="Link to this heading">¶</a></h3>
 <p>In the Ukraine WESM, the commercial and public services sector is modelled with a broader set of fuel demands, reflecting the sector’s diverse energy requirements. These include coal, petroleum products, LPG, natural gas, biomass, electricity, and heat. Each demand category is linked to the relevant technologies, enabling the model to capture Ukraine’s reliance on both fossil fuels and district heating, as well as its growing electricity demand.</p>
-<a class="reference internal image-reference" href="img/wesm_commercial.svg"><img alt="Commercial sector" src="img/wesm_commercial.svg" style="width: 1200px;" />
+<a class="reference internal image-reference" href="_images/wesm_commercial.png"><img alt="Commercial sector" src="_images/wesm_commercial.png" style="width: 1000px;" />
 </a>
 </section>
 <section id="industry">
 <h3>Industry<a class="headerlink" href="#industry" title="Link to this heading">¶</a></h3>
 <p>The industrial sector in the Ukraine WESM is represented with more complexity than agriculture or commercial services. It is divided into subsectors, including non-metals and cement (IMM), other manufacturing and processes (IOM), and food processing. Tthe Ukrainian framework considers a broad range of fuels and carriers for industrial activities.</p>
 <p>For both IMM and IOM subsectors, demand categories are explicitly defined for coal, coal products, petroleum products, natural gas, biomass, electricity, and heat. This structure reflects the energy‑intensive nature of Ukraine’s industries, particularly steel, cement, and chemicals, which remain major consumers of coal, natural gas, and heat. Meanwhile, food processing and lighter manufacturing are also included, with a stronger emphasis on electricity and heat.</p>
-<a class="reference internal image-reference" href="img/wesm_industry.svg"><img alt="Industrial sector" src="img/wesm_industry.svg" style="width: 1200px;" />
+<a class="reference internal image-reference" href="_images/wesm_industry.png"><img alt="Industrial sector" src="_images/wesm_industry.png" style="width: 1000px;" />
 </a>
 </section>
 <section id="residential-sector">
 <h3>Residential sector<a class="headerlink" href="#residential-sector" title="Link to this heading">¶</a></h3>
 <p>The residential sector is a complex component of the Ukraine WESM, reflecting both its size and its dominant share of final energy consumption. Energy service demands are divided into cooling, cooking, lighting, and heating/hot water, with each category further disaggregated into urban and rural households to capture geographic and socio‑economic differences.</p>
 <p>The Ukrainian context is heavily shaped by space heating and hot water demand, given the country’s cold climate and widespread district heating networks. Residential heating can be covered by a broad portfolio of fuels and technologies, including natural gas boilers, coal stoves, biomass burners, electric heaters, and district heating connections. Cooking is also represented by multiple technological variants, spanning gas stoves, electric stoves, LPG stoves, and traditional biomass devices. Lighting relies almost exclusively on electricity in both urban and rural areas. At the same time, cooling demand, although currently small, is met by electricity-based appliances.</p>
-<a class="reference internal image-reference" href="img/wesm_residential.svg"><img alt="Residential sector" src="img/wesm_residential.svg" style="width: 1200px;" />
+<a class="reference internal image-reference" href="_images/wesm_residential.png"><img alt="Residential sector" src="_images/wesm_residential.png" style="width: 1000px;" />
 </a>
 </section>
 <section id="transport">
@@ -124,86 +1149,46 @@ Timeslices are how the model represents temporal variations within a single year
 <p>Each road subsector has multiple technology options, reflecting the expanding diversity of Ukraine’s vehicle fleet. These include petroleum products (such as diesel and gasoline), natural gas (CNG/LNG), biodiesel blends, and, in the case of buses and passenger cars. For freight trucks, liquid fuels still dominate. Still, options such as natural gas and biodiesel are also incorporated to account for potential fuel switching.</p>
 <p>The railway system is represented by technologies using coal, diesel, and electricity, reflecting the sector’s historical reliance on fossil fuels and its ongoing partial electrification. Passenger rail demand is increasingly electrified, but diesel still plays a role in non‑electrified corridors.</p>
 <p>Aviation demand is satisfied exclusively by technologies using jet fuel (kerosene‑based aviation fuel). In contrast, navigation demand (inland and maritime shipping) relies on petroleum products such as heavy fuel oil and diesel.</p>
-<a class="reference internal image-reference" href="img/wesm_transports.svg"><img alt="Transport sector" src="img/wesm_transports.svg" style="width: 1200px;" />
+<a class="reference internal image-reference" href="_images/wesm_transport.png"><img alt="Transport sector" src="_images/wesm_transport.png" style="width: 1000px;" />
 </a>
 </section>
-<section id="id1">
-<h3>Transport<a class="headerlink" href="#id1" title="Link to this heading">¶</a></h3>
+<section id="iron-and-steel">
+<h3>Iron and Steel<a class="headerlink" href="#iron-and-steel" title="Link to this heading">¶</a></h3>
 <p>The iron and steel sector in Ukraine’s WESM is explicitly modelled due to its central role in the country’s economy and its significant contribution to energy use and CO₂ emissions. Conventional steelmaking technologies are represented, including the Blast Furnace (BF), Basic Oxygen Furnace (BOF), Open Hearth Furnace (OHF), and Electric Arc Furnace (EAF), which capture the diversity of Ukraine’s current steel production base. In addition to these conventional routes, the model also incorporates low‑carbon steelmaking options. These include the CCS‑equipped Blast Furnace–Basic Oxygen Furnace (CCS BF‑BOF) pathway, which reduces emissions by capturing and storing CO₂; Direct Reduced Iron using Natural Gas (DRI‑NG), a less carbon‑intensive alternative; and Direct Reduced Iron using Hydrogen (DRI‑H₂), coupled with an electrolyser to produce the required hydrogen from water and electricity. By incorporating both traditional and emerging low-carbon routes, the model facilitates the evaluation of transition pathways for Ukraine’s steel industry, taking into account energy demand, opportunities for emission reduction, and technological shifts over time.</p>
+<a class="reference internal image-reference" href="_images/wesm_iron_steel.png"><img alt="Iron-steel" src="_images/wesm_iron_steel.png" style="width: 1000px;" />
+</a>
+</section>
+<section id="low-carbon-fuels">
+<h3>Low carbon fuels<a class="headerlink" href="#low-carbon-fuels" title="Link to this heading">¶</a></h3>
+<p>The model also incorporates low carbon fuels pathways, which play an important role in decarbonising the transport and power sectors. Syngas (SYG) is produced through gasification processes (GSFR), often using low carbon biomass as feedstock, and can be further converted into synthetic natural gas (SNG) through a methanation process (MTHPLANT). Alternatively, syngas can be directed into a Fischer–Tropsch (FT) plant, which yields FT diesel (FTDSL) as a liquid low carbon fuel, while also capturing and accounting for associated CO₂ emissions. In addition, the system considers the use of hydrogen (H₂) both as a direct input to syngas upgrading and as a complementary pathway to synthetic fuel production. The model also includes the ELCIGCC technology, where syngas is used directly in an integrated gasification combined cycle (IGCC) power plant to generate electricity more efficiently while offering the potential for carbon capture integration. By modelling these conversion routes, the framework captures the potential of advanced low carbon fuels to substitute conventional fossil fuels in Ukraine’s energy mix, supporting deep emission reductions and offering flexibility across multiple demand sectors.</p>
+<a class="reference internal image-reference" href="_images/wesm_lcf.png"><img alt="low carbon fuel" src="_images/wesm_lcf.png" style="width: 1000px;" />
+</a>
 </section>
 </section>
 </section>
 
 
           </div>
-          
-        </div>
-      </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="Main">
-        <div class="sphinxsidebarwrapper">
-<h1 class="logo"><a href="index.html">Ukraine WESM Model Docs</a></h1>
-
-
-
-
-
-
-
-
-
-<search id="searchbox" style="display: none" role="search">
-    <div class="searchformwrapper">
-    <form class="search" action="search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Search"/>
-      <input type="submit" value="Go" />
-    </form>
-    </div>
-</search>
-<script>document.getElementById('searchbox').style.display = "block"</script><h3>Navigation</h3>
-<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
-<ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">1. Model structure</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#model-configuration-sets">1.2 Model configuration - Sets</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#reference-energy-system">1.3 Reference energy system</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#sectors">1.4 Sectors</a></li>
-</ul>
-</li>
-</ul>
-
-<div class="relations">
-<h3>Related Topics</h3>
-<ul>
-  <li><a href="index.html">Documentation overview</a><ul>
-      <li>Previous: <a href="index.html" title="previous chapter">Ukraine WESM Model Docs documentation</a></li>
-  </ul></li>
-</ul>
+          <div class="page-nav">
+            <div class="inner"><ul class="page-nav">
+  <li class="prev">
+    <a href="index.html"
+       title="previous chapter">← Ukraine WESM Model Docs documentation</a>
+  </li>
+  <li class="next">
+    <a href="demands.html"
+       title="next chapter">2. Demand projections →</a>
+  </li>
+</ul><div class="footer" role="contentinfo">
+      &#169; Copyright 2025, Roberto Heredia-Fonseca.
+    <br>
+    Created using <a href="http://sphinx-doc.org/">Sphinx</a> 8.2.3 with <a href="https://github.com/schettino72/sphinx_press_theme">Press Theme</a> 0.9.1.
 </div>
-
-
-
-
-
-
-
-
-        </div>
-      </div>
-      <div class="clearer"></div>
-    </div>
-    <div class="footer">
-      &#169;2025, Roberto Heredia-Fonseca.
-      
-      |
-      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 8.2.3</a>
-      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 1.0.0</a>
-      
-      |
-      <a href="_sources/modelstructure.rst.txt"
-          rel="nofollow">Page source</a>
-    </div>
-
+            </div>
+          </div>
+      </page>
+    </div></div>
     
-
     
   </body>
 </html>

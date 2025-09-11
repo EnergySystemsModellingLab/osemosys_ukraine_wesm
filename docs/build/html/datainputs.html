@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html  lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1"><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+      <title>3. Data inputs</title>
+    
+          <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+          <link rel="stylesheet" href="_static/theme.css " type="text/css" />
+      
+      <!-- sphinx script_files -->
+        <script src="_static/documentation_options.js?v=2709fde1"></script>
+        <script src="_static/doctools.js?v=9bcbadda"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+
+      
+      <!-- bundled in js (rollup iife) -->
+      <!-- <script src="_static/theme-vendors.js"></script> -->
+      <script src="_static/theme.js" defer></script>
+    
+  <link rel="index" title="Index" href="genindex.html" />
+  <link rel="search" title="Search" href="search.html" />
+  <link rel="prev" title="2. Demand projections" href="demands.html" /> 
+  </head>
+
+  <body>
+    <div id="app">
+    <div class="theme-container" :class="pageClasses"><navbar @toggle-sidebar="toggleSidebar">
+  <router-link to="index.html" class="home-link">
+    
+      <span class="site-name">Ukraine WESM Model Docs</span>
+    
+  </router-link>
+
+  <div class="links">
+    <navlinks class="can-hide">
+
+
+
+    </navlinks>
+  </div>
+</navbar>
+
+      
+      <div class="sidebar-mask" @click="toggleSidebar(false)">
+      </div>
+        <sidebar @toggle-sidebar="toggleSidebar">
+          
+          <navlinks>
+            
+
+
+
+            
+          </navlinks><div id="searchbox" class="searchbox" role="search">
+  <div class="caption"><span class="caption-text">Quick search</span>
+    <div class="searchformwrapper">
+      <form class="search" action="search.html" method="get">
+        <input type="text" name="q" />
+        <input type="submit" value="Search" />
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+      </form>
+    </div>
+  </div>
+</div><div class="sidebar-links" role="navigation" aria-label="main navigation">
+  
+    <div class="sidebar-group">
+      <p class="caption">
+        <span class="caption-text"><a href="index.html#ukraine-wesm-model-docs-documentation">Contents:</a></span>
+      </p>
+      <ul class="current">
+        
+          <li class="toctree-l1 ">
+            
+              <a href="modelstructure.html" class="reference internal ">1. Model structure</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="demands.html" class="reference internal ">2. Demand projections</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 current">
+            
+              <a href="#" class="reference internal current">3. Data inputs</a>
+            
+
+            
+              <ul>
+                
+                  <li class="toctree-l2"><a href="#main-data-sources" class="reference internal">3.1 Main data sources</a></li>
+                
+                  <li class="toctree-l2"><a href="#global-parameters" class="reference internal">3.2 Global parameters</a></li>
+                
+              </ul>
+            
+          </li>
+
+        
+      </ul>
+    </div>
+  
+</div>
+        </sidebar>
+
+      <page>
+          <div class="body-header" role="navigation" aria-label="navigation">
+  
+  <ul class="breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+    
+    <li>3. Data inputs</li>
+  </ul>
+  
+
+  <ul class="page-nav">
+  <li class="prev">
+    <a href="demands.html"
+       title="previous chapter">← 2. Demand projections</a>
+  </li>
+</ul>
+  
+</div>
+<hr>
+          <div class="content" role="main" v-pre>
+            
+  <section id="data-inputs">
+<h1>3. Data inputs<a class="headerlink" href="#data-inputs" title="Link to this heading">¶</a></h1>
+<p>This section provides an overview of the data sources used in the Ukraine WESM model and describes their implementation.</p>
+<section id="main-data-sources">
+<h2>3.1 Main data sources<a class="headerlink" href="#main-data-sources" title="Link to this heading">¶</a></h2>
+<p>The following table lists the principal data sources used to populate the model. Where available, Ukrainian national data has been prioritised, either directly incorporated into the model or used to validate existing datasets. This is particularly applicable to the 2020 Ukrainian energy balance, which serves as the baseline for final energy demand across all sectors.</p>
+<p>For the agricultural, commercial, and industrial sectors, sectoral fuel use and activity data were primarily sourced from the State Statistics Service of Ukraine (Ukrstat) and supplemented with international sources (e.g., IEA energy balances, UN Energy Statistics) where gaps existed. The power and heat sector relies heavily on data published by Ukrenergo, the Ministry of Energy of Ukraine, and the Energy Community Secretariat, especially regarding generation capacity, fuel efficiency, and cross‑border interconnection.</p>
+<p>Information for the residential sector, including the split between urban and rural households, cooking technologies, district heating reliance, and electrification trends, was derived from national statistics (Ukrstat household energy consumption surveys) and supplemented by analytical reports from the Energy Community, the World Bank, and the IEA.</p>
+<p>Together, these sources ensure that the model reflects both the official Ukrainian energy statistics and internationally recognised datasets, while capturing the specific characteristics of Ukraine’s energy system.</p>
+<table class="docutils align-left">
+<colgroup>
+<col style="width: 18.8%" />
+<col style="width: 18.8%" />
+<col style="width: 18.8%" />
+<col style="width: 43.8%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Category</p></th>
+<th class="head"><p>Source</p></th>
+<th class="head"><p>Data type</p></th>
+<th class="head"><p>Link</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Power Sector</p></td>
+<td><p>DTU</p></td>
+<td><p>Technoeconomic data</p></td>
+<td><p><a class="reference external" href="https://backend.orbit.dtu.dk/ws/portalfiles/portal/190787097/long_term_energy_modelling_and_forecasting_in_ukraine_english.pdf">https://backend.orbit.dtu.dk/ws/portalfiles/portal/190787097/long_term_energy_modelling_and_forecasting_in_ukraine_english.pdf</a></p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>Energy Charter</p></td>
+<td><p>Evaluation and damage of infrastructure</p></td>
+<td><p><a class="reference external" href="https://www.energycharter.org/fileadmin/DocumentsMedia/Occasional/2023_05_24_UA_sectoral_evaluation_and_damage_assessment_Version_X_final.pdf">https://www.energycharter.org/fileadmin/DocumentsMedia/Occasional/2023_05_24_UA_sectoral_evaluation_and_damage_assessment_Version_X_final.pdf</a></p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>State Statistic Service of Ukraine</p></td>
+<td><p>Dataset time series electricity</p></td>
+<td><p><a class="reference external" href="https://www.ukrstat.gov.ua/">https://www.ukrstat.gov.ua/</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Residential</p></td>
+<td><p>WHO</p></td>
+<td><p>Dataset  HH</p></td>
+<td><p>	<a class="reference external" href="https://www.who.int/data/gho/data/indicators/indicator-details/GHO/proportion-of-population-with-primary-reliance-on-fuels-and-technologies-for-cooking-by-fuel-type">https://www.who.int/data/gho/data/indicators/indicator-details/GHO/proportion-of-population-with-primary-reliance-on-fuels-and-technologies-for-cooking-by-fuel-type</a></p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td></td>
+<td><p>Dataset  HH</p></td>
+<td><p><a class="reference external" href="https://mics.unicef.org/sites/mics/files/Ukraine%202012%20MICS_English.pdf">https://mics.unicef.org/sites/mics/files/Ukraine%202012%20MICS_English.pdf</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Transport</p></td>
+<td><p>State Statistic Service of Ukraine</p></td>
+<td><p>Dataset transport</p></td>
+<td><p><a class="reference external" href="https://www.ukrstat.gov.ua/">https://www.ukrstat.gov.ua/</a></p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>The Danish Energy Agency</p></td>
+<td><p>Technoeconomic data</p></td>
+<td><p><a class="reference external" href="https://ens.dk/en/analyses-and-statistics/technology-catalogue-commercial-freight-and-passenger-transport">https://ens.dk/en/analyses-and-statistics/technology-catalogue-commercial-freight-and-passenger-transport</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Iron Steel</p></td>
+<td><p>IKI</p></td>
+<td><p>Technoeconomic data</p></td>
+<td><p><a class="reference external" href="https://www.lowcarbonukraine.com/wp-content/uploads/LCU_PB_05_Ukraine_Steel_sector_final.pdf">https://www.lowcarbonukraine.com/wp-content/uploads/LCU_PB_05_Ukraine_Steel_sector_final.pdf</a></p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>EU parliament</p></td>
+<td><p>Technoeconomic data</p></td>
+<td><p><a class="reference external" href="https://www.europarl.europa.eu/RegData/etudes/BRIE/2020/641552/EPRS_BRI(2020)641552_EN.pdf">https://www.europarl.europa.eu/RegData/etudes/BRIE/2020/641552/EPRS_BRI(2020)641552_EN.pdf</a></p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>Joule</p></td>
+<td><p>Technoeconomic data</p></td>
+<td><p><a class="reference external" href="https://www.sciencedirect.com/science/article/pii/S2542435124004252">https://www.sciencedirect.com/science/article/pii/S2542435124004252</a></p></td>
+</tr>
+<tr class="row-even"><td><p>Demands</p></td>
+<td><p>UN</p></td>
+<td><p>Energy Balance</p></td>
+<td><p><a class="reference external" href="https://unstats.un.org/unsd/energystats/dataPortal/">https://unstats.un.org/unsd/energystats/dataPortal/</a></p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>World Bank Group</p></td>
+<td><p>Drivers</p></td>
+<td><p><a class="reference external" href="https://data.worldbank.org/country/ukraine">https://data.worldbank.org/country/ukraine</a></p></td>
+</tr>
+<tr class="row-even"><td><p>Agriculture</p></td>
+<td><p>UN</p></td>
+<td><p>Energy Balance</p></td>
+<td><p><a class="reference external" href="https://unstats.un.org/unsd/energystats/dataPortal/">https://unstats.un.org/unsd/energystats/dataPortal/</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Industry</p></td>
+<td><p>UN</p></td>
+<td><p>Energy Balance</p></td>
+<td><p><a class="reference external" href="https://unstats.un.org/unsd/energystats/dataPortal/">https://unstats.un.org/unsd/energystats/dataPortal/</a></p></td>
+</tr>
+<tr class="row-even"><td><p>Commercial</p></td>
+<td><p>UN</p></td>
+<td><p>Energy Balance</p></td>
+<td><p><a class="reference external" href="https://unstats.un.org/unsd/energystats/dataPortal/">https://unstats.un.org/unsd/energystats/dataPortal/</a></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="global-parameters">
+<h2>3.2 Global parameters<a class="headerlink" href="#global-parameters" title="Link to this heading">¶</a></h2>
+<p>Global parameters are settings that affect the entire model’s behavior.</p>
+<section id="discountrate">
+<h3>DiscountRate<a class="headerlink" href="#discountrate" title="Link to this heading">¶</a></h3>
+<p>The discount rate applied to the model is 15.5%.</p>
+</section>
+<section id="yearsplit">
+<h3>YearSplit<a class="headerlink" href="#yearsplit" title="Link to this heading">¶</a></h3>
+<p>The duration of a timeslice as a fraction of the year is set in the YearSplit. The length of each timeslice is given by the combination of season and fraction of the day. Each season is represented by each month of the year. During the day, six representative time periods were selected. In total, 72 timeslices are provided by a unique combination of season time periods. The fractions of the day are: “0-3”, “4-7”, “8-11”, “12-15”, “16-19”, “20-23”. The figure below presents the electricity profile used in the model.</p>
+<a class="reference internal image-reference" href="_images/ts.png"><img alt="Electricity demand profile" src="_images/ts.png" style="width: 1000px;" />
+</a>
+</section>
+</section>
+</section>
+
+
+          </div>
+          <div class="page-nav">
+            <div class="inner"><ul class="page-nav">
+  <li class="prev">
+    <a href="demands.html"
+       title="previous chapter">← 2. Demand projections</a>
+  </li>
+</ul><div class="footer" role="contentinfo">
+      &#169; Copyright 2025, Roberto Heredia-Fonseca.
+    <br>
+    Created using <a href="http://sphinx-doc.org/">Sphinx</a> 8.2.3 with <a href="https://github.com/schettino72/sphinx_press_theme">Press Theme</a> 0.9.1.
+</div>
+            </div>
+          </div>
+      </page>
+    </div></div>
+    
+    
+  </body>
+</html>

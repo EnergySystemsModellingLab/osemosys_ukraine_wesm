@@ -1,24 +1,24 @@
 Technology,Description
-ABIO,Agr biomass
-ACOA,Agr coal
-AELC,Agr electricity
-AHET,Agr heat
-ANGS,Agr ngs
-APPP,Agr petroleum products
-CBIO,Com and P sector demand bio
-CCOA,Com and P sector demand coal
-CCOP,Com and P sector demand coal pr.
-CELC,Com and P sector demand electri.
-CHET,Com and P sector demand heat
-CLPG,Com and P sector demand lpg
-CNGS,Com and P sector demand ngs
-ELCCECHR,Powert Plant CHP ngs
-ELCCOMSOL,Solar PV commercial
-ELCIGCC,Integrated Gasification Combined.
+ABIO,Agr biomass
+ACOA,Agr coal
+AELC,Agr electricity
+AHET,Agr heat
+ANGS,Agr ngs
+APPP,Agr petroleum products
+CBIO,Com and P sector demand bio
+CCOA,Com and P sector demand coal
+CCOP,Com and P sector demand coal pr.
+CELC,Com and P sector demand electri.
+CHET,Com and P sector demand heat
+CLPG,Com and P sector demand lpg
+CNGS,Com and P sector demand ngs
+ELCCECHR,Powert Plant CHP ngs
+ELCCOMSOL,Solar PV commercial
+ELCIGCC,Integrated Gasification Combined.
 ELCNENUCK1,Power Plants Existing - Nuclear Energy - Khmelnitsk 1
 ELCNENUCK2,Power Plants Existing - Nuclear Energy - Khmelnitsk 2
-ELCNENUCK3,Unit 3 at the Khmelnytska NPP
-ELCNENUCK4,Unit 4 at the Khmelnytska NPP
+ELCNENUCK3,Unit 3 at the Khmelnytska NPP
+ELCNENUCK4,Unit 4 at the Khmelnytska NPP
 ELCNENUCR1,Power Plants Existing - Nuclear Energy - Rivne 1
 ELCNENUCR2,Power Plants Existing - Nuclear Energy - Rivne 2
 ELCNENUCR3,Power Plants Existing - Nuclear Energy - Rivne 3
@@ -32,9 +32,9 @@ ELCNENUCZ3,Power Plants Existing - Nuclear Energy - Zaporizzhya 3
 ELCNENUCZ4,Power Plants Existing - Nuclear Energy - Zaporizzhya 4
 ELCNENUCZ5,Power Plants Existing - Nuclear Energy - Zaporizzhya 5
 ELCNENUCZ6,Power Plants Existing - Nuclear Energy - Zaporizzhya 6
-ELCNEWNUC,New nuclear power plants
-ELCREBIO00,Power Plants Existing00 - Biomass
-ELCREGEO00,Geothermal power plants
+ELCNEWNUC,New nuclear power plants
+ELCREBIO00,Power Plants Existing00 - Biomass
+ELCREGEO00,Geothermal power plants
 ELCREHYDPSKY1,Power Plants Existing - Hydro Energy - Pumped storage power - Kyivska 1
 ELCREHYDPSDS1,Power Plants Existing - Hydro Energy - Pumped storage power - Dnistrovska 1
 ELCREHYDHPSD1,Power Plants Existing - Hydro Energy - Hydro power - Seredniodniprovska 1
@@ -44,144 +44,144 @@ ELCREHYDHPKH1,Power Plants Existing - Hydro Energy - Hydro power - Kahovska 1
 ELCREHYDHPKA1,Power Plants Existing - Hydro Energy - Hydro power - Kanivska 1
 ELCREHYDHPDS1,Power Plants Existing - Hydro Energy - Hydro power - Dnistrovska 1
 ELCREHYDHPDP1,Power Plants Existing - Hydro Energy - Hydro power - Dniprovska 1&2
-ELCRESOL00,Power Plants Existing00 - Solar e.
-ELCRESSOL,Solar PV residential
-ELCREWIN00,Power Plants Existing00 - Wind e.
-ELCTECHR00,Power Plants Existing00 - Solid F.
-ELCTEGAS00,Power Plants Existing00 - Natura.
-FTEAGRBIO,Agriculture biomass
-FTEAGRCOA,Agriculture coal
-FTEAGRELC,Agriculture electricity
-FTEAGRHET,Agriculture heat
-FTEAGRNGS,Agriculture ngs
-FTEAGRPPP,Agriculture petroleum
-FTECOMBIO,Com and P Sector bio and residues
-FTECOMCOA,Com and P Sector coal
-FTECOMCOP,Com and P Sector coal prod
-FTECOMELC,Com and P Sector electricity
-FTECOMHET,Com and P Sector heat
-FTECOMLPG,Com and P Sector lpg
-FTECOMNGS,Com and P Sector ngs
-FTEELCCOA,Electricity coal
-FTEELCNGS,Electricity ngs
-FTEELCSYG,Syngas for electricity
-FTEFTPSYG,Syngas FT plant
-FTEFTRBID,FTR biodiesel
-FTEFTRCOA,FTR coal
-FTEFTRELC,FTR electricity
-FTEFTRNGS,FTR ngs
-FTEFTRPPP,FTR petroleum products diesel
-FTEH2ELC,Electricity for electrolyzers
-FTEINDBIO,Industry biomass
-FTEINDCOK,Industry coking coal
-FTEINDCOP,Industry coal products
-FTEINDELC,Industry electricity
-FTEINDHET,Industry heat
-FTEINDNGS,Industry ngs
-FTEINDPPP,Industry petroleum prod
-FTEISTBIO,Bio iron-steel
-FTEISTCOA,Coa iron-steel
-FTEISTCOK,Coking coal iron-steel
-FTEISTELC,Elc iron-steel
-FTEISTHET,Heat iron-steel
-FTEISTIOR,Iron ore iron-steel
-FTEISTNGS,NGS iron-steel
-FTEISTPPP,Petroleum prod iron-steel
-FTEISTSCR,Metal scrap iron-steel
-FTELCFBIO,Low carbon fuels biomass
-FTEMTHSYG,Syngas methanation plant
-FTEPTRBID,PTR biodiesel
-FTEPTRCOA,PTR coal
-FTEPTRELC,PTR electricity
-FTEPTRNGS,PTR ngs
-FTEPTRPPP,PTR petroleum products diesel
-FTERESBIO,Residential bio
-FTERESCOA,Residential coal
-FTERESELC,Residential electricity
-FTERESLPG,Residential lpg
-FTERESNGS,Residential ngs
-FTETINDCOA,Industry coal
-FTPLANT,Fischer-Tropsch (FT)
-FTRABUBID,FTR truck petroleum biodiesel
-FTRABUNGS,FTR truck ngs
-FTRABUPPP,FTR truck petroleum products
-FTRNAVPPP,FTR navigation petroleum products
-FTRRAICOA,FTR rail coal
-FTRRAIELC,FTR rail electricity
-FTRRAIPPP,FTR rail petroleum products
+ELCRESOL00,Power Plants Existing00 - Solar e.
+ELCRESSOL,Solar PV residential
+ELCREWIN00,Power Plants Existing00 - Wind e.
+ELCTECHR00,Power Plants Existing00 - Solid F.
+ELCTEGAS00,Power Plants Existing00 - Natura.
+FTEAGRBIO,Agriculture biomass
+FTEAGRCOA,Agriculture coal
+FTEAGRELC,Agriculture electricity
+FTEAGRHET,Agriculture heat
+FTEAGRNGS,Agriculture ngs
+FTEAGRPPP,Agriculture petroleum
+FTECOMBIO,Com and P Sector bio and residues
+FTECOMCOA,Com and P Sector coal
+FTECOMCOP,Com and P Sector coal prod
+FTECOMELC,Com and P Sector electricity
+FTECOMHET,Com and P Sector heat
+FTECOMLPG,Com and P Sector lpg
+FTECOMNGS,Com and P Sector ngs
+FTEELCCOA,Electricity coal
+FTEELCNGS,Electricity ngs
+FTEELCSYG,Syngas for electricity
+FTEFTPSYG,Syngas FT plant
+FTEFTRBID,FTR biodiesel
+FTEFTRCOA,FTR coal
+FTEFTRELC,FTR electricity
+FTEFTRNGS,FTR ngs
+FTEFTRPPP,FTR petroleum products diesel
+FTEH2ELC,Electricity for electrolyzers
+FTEINDBIO,Industry biomass
+FTEINDCOK,Industry coking coal
+FTEINDCOP,Industry coal products
+FTEINDELC,Industry electricity
+FTEINDHET,Industry heat
+FTEINDNGS,Industry ngs
+FTEINDPPP,Industry petroleum prod
+FTEISTBIO,Bio iron-steel
+FTEISTCOA,Coa iron-steel
+FTEISTCOK,Coking coal iron-steel
+FTEISTELC,Elc iron-steel
+FTEISTHET,Heat iron-steel
+FTEISTIOR,Iron ore iron-steel
+FTEISTNGS,NGS iron-steel
+FTEISTPPP,Petroleum prod iron-steel
+FTEISTSCR,Metal scrap iron-steel
+FTELCFBIO,Low carbon fuels biomass
+FTEMTHSYG,Syngas methanation plant
+FTEPTRBID,PTR biodiesel
+FTEPTRCOA,PTR coal
+FTEPTRELC,PTR electricity
+FTEPTRNGS,PTR ngs
+FTEPTRPPP,PTR petroleum products diesel
+FTERESBIO,Residential bio
+FTERESCOA,Residential coal
+FTERESELC,Residential electricity
+FTERESLPG,Residential lpg
+FTERESNGS,Residential ngs
+FTETINDCOA,Industry coal
+FTPLANT,Fischer-Tropsch (FT)
+FTRABUBID,FTR truck petroleum biodiesel
+FTRABUNGS,FTR truck ngs
+FTRABUPPP,FTR truck petroleum products
+FTRNAVPPP,FTR navigation petroleum products
+FTRRAICOA,FTR rail coal
+FTRRAIELC,FTR rail electricity
+FTRRAIPPP,FTR rail petroleum products
 GSFR,Gasifier
-HETREBIO,Heat plants biomass
-HETRECOA,Heat plants coal
-HETRECOP,Heat plants coal products
-HETRENGS,Heat plants ngs
-HETREOIL,Heat plants oil
-HETREPPP,Heat plants petroleum products
-IMMBIO,Ind IMM biomass
-IMMCOA,Ind IMM coal
-IMMCOP,Ind IMM coal products
-IMMELC,Ind IMM electricity
-IMMHET,Ind IMM heat
-IMMNGS,Ind IMM ngs
-IMPCOA,Import coal steam
-IMPCOK,Import cooking coal industry
-IMPELC,Import Electricity
-IMPPP,Ind IMM petroleum products
-IOMBIO,Ind IOM biomass
-IOMCOA,Ind IOM coal
-IOMCOP,Ind IOM coal products
-IOMELC,Ind IOM electricity
-IOMHET,Ind IOM heat
-IOMNGS,Ind IOM ngs
-IOMPPP,Ind IOM petroleum products
-ISTBFBOF,Blast Furnace-Basic Oxygen Fur.
-ISTCCSBF,Blast Furnace-Basic Oxygen Fur.
-ISTDRIH2,Direct Reduced Iron H2
-ISTDRINGS,Direct Reduced Iron using NGS
-ISTEAF,Electric arc furnace
+HETREBIO,Heat plants biomass
+HETRECOA,Heat plants coal
+HETRECOP,Heat plants coal products
+HETRENGS,Heat plants ngs
+HETREOIL,Heat plants oil
+HETREPPP,Heat plants petroleum products
+IMMBIO,Ind IMM biomass
+IMMCOA,Ind IMM coal
+IMMCOP,Ind IMM coal products
+IMMELC,Ind IMM electricity
+IMMHET,Ind IMM heat
+IMMNGS,Ind IMM ngs
+IMPCOA,Import coal steam
+IMPCOK,Import cooking coal industry
+IMPELC,Import Electricity
+IMPPP,Ind IMM petroleum products
+IOMBIO,Ind IOM biomass
+IOMCOA,Ind IOM coal
+IOMCOP,Ind IOM coal products
+IOMELC,Ind IOM electricity
+IOMHET,Ind IOM heat
+IOMNGS,Ind IOM ngs
+IOMPPP,Ind IOM petroleum products
+ISTBFBOF,Blast Furnace-Basic Oxygen Fur.
+ISTCCSBF,Blast Furnace-Basic Oxygen Fur.
+ISTDRIH2,Direct Reduced Iron H2
+ISTDRINGS,Direct Reduced Iron using NGS
+ISTEAF,Electric arc furnace
 ISTELCH2,Electrolyser
-MINBID,Mining Biodiesel
-MINBIO,Mining bio
-MINCOA,Mining coal
-MINCOP,Coal products
-MINIOR,Mining iron ore
-MINLPG,Mining lpg
-MINNGS,Mining ngs
-MINNUC,Nuclear fuel
-MINPPP,Mining petroleum petroducts
-MINSCR,Mining metal scrap
-MTHPLANT,Syngas_Methanation Plant
-PEMH2,PEM electrolyser
-PTRABUBID,PTR buses-auto biodiesel
-PTRABUNGS,PTR buses-auto ngs
-PTRABUPPP,PTR buses-auto petroleum prod
-PTRNAVPPP,PTR navigation petroleum prod
-PTRRAICOA,PTR rail coal
-PTRRAIELC,PTR rail electricity
-PTRRAIPPP,PTR rail petroleum prod
-RC1ELC001,Cooling electric urban
-RC2ELC001,Cooling electric rural
-RK1BIO001,Stove bio urban
-RK1COA001,Stove coal urban
-RK1ELC001,Stove electricity urban
-RK1LPG001,Stove lpg urban
-RK1NGS001,Stove ngs urban
-RK2BIO001,Stove bio rural
-RK2COA001,Stove coal rural
-RK2ELC001,Stove electricity rural
-RK2LPG001,Stove lpg rural
-RK2NGS001,Stove ngs rural
-RL1ELC001,Residential - Lighting urban - Ele.
-RL2ELC001,Residential - Lighting rural - Elect.
-RO1BIO001,Residential-Heating urban - bio
-RO1COA001,Residential-Heating urban - Coal
-RO1ELC001,Residential-Heating urban - Elect.
-RO1HET001,Residential-Heating urban - Heat
-RO1NGS001,Residential-Heating urban - NGS
-RO1OIP001,Residential-Heating urban - LPG
-RO2BIO001,Residential-Heating rural - BIO
-RO2COA001,Residential-Heating rural -Coal
-RO2ELC001,Residential-Heating rural - ELC
-RO2HET001,Residential-Heating rural - Heat
-RO2NGS001,Residential-Heating rural - NGS
-RO2OIP001,Residential-Heating rural -LPG
+MINBID,Mining Biodiesel
+MINBIO,Mining bio
+MINCOA,Mining coal
+MINCOP,Coal products
+MINIOR,Mining iron ore
+MINLPG,Mining lpg
+MINNGS,Mining ngs
+MINNUC,Nuclear fuel
+MINPPP,Mining petroleum petroducts
+MINSCR,Mining metal scrap
+MTHPLANT,Syngas_Methanation Plant
+PEMH2,PEM electrolyser
+PTRABUBID,PTR buses-auto biodiesel
+PTRABUNGS,PTR buses-auto ngs
+PTRABUPPP,PTR buses-auto petroleum prod
+PTRNAVPPP,PTR navigation petroleum prod
+PTRRAICOA,PTR rail coal
+PTRRAIELC,PTR rail electricity
+PTRRAIPPP,PTR rail petroleum prod
+RC1ELC001,Cooling electric urban
+RC2ELC001,Cooling electric rural
+RK1BIO001,Stove bio urban
+RK1COA001,Stove coal urban
+RK1ELC001,Stove electricity urban
+RK1LPG001,Stove lpg urban
+RK1NGS001,Stove ngs urban
+RK2BIO001,Stove bio rural
+RK2COA001,Stove coal rural
+RK2ELC001,Stove electricity rural
+RK2LPG001,Stove lpg rural
+RK2NGS001,Stove ngs rural
+RL1ELC001,Residential - Lighting urban - Ele.
+RL2ELC001,Residential - Lighting rural - Elect.
+RO1BIO001,Residential-Heating urban - bio
+RO1COA001,Residential-Heating urban - Coal
+RO1ELC001,Residential-Heating urban - Elect.
+RO1HET001,Residential-Heating urban - Heat
+RO1NGS001,Residential-Heating urban - NGS
+RO1OIP001,Residential-Heating urban - LPG
+RO2BIO001,Residential-Heating rural - BIO
+RO2COA001,Residential-Heating rural -Coal
+RO2ELC001,Residential-Heating rural - ELC
+RO2HET001,Residential-Heating rural - Heat
+RO2NGS001,Residential-Heating rural - NGS
+RO2OIP001,Residential-Heating rural -LPG
 T_D,T&D

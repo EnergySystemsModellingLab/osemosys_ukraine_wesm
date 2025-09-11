@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html  lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1"><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+      <title>2. Demand projections</title>
+    
+          <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+          <link rel="stylesheet" href="_static/theme.css " type="text/css" />
+      
+      <!-- sphinx script_files -->
+        <script src="_static/documentation_options.js?v=2709fde1"></script>
+        <script src="_static/doctools.js?v=9bcbadda"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+
+      
+      <!-- bundled in js (rollup iife) -->
+      <!-- <script src="_static/theme-vendors.js"></script> -->
+      <script src="_static/theme.js" defer></script>
+    
+  <link rel="index" title="Index" href="genindex.html" />
+  <link rel="search" title="Search" href="search.html" />
+  <link rel="next" title="3. Data inputs" href="datainputs.html" />
+  <link rel="prev" title="1. Model structure" href="modelstructure.html" /> 
+  </head>
+
+  <body>
+    <div id="app">
+    <div class="theme-container" :class="pageClasses"><navbar @toggle-sidebar="toggleSidebar">
+  <router-link to="index.html" class="home-link">
+    
+      <span class="site-name">Ukraine WESM Model Docs</span>
+    
+  </router-link>
+
+  <div class="links">
+    <navlinks class="can-hide">
+
+
+
+    </navlinks>
+  </div>
+</navbar>
+
+      
+      <div class="sidebar-mask" @click="toggleSidebar(false)">
+      </div>
+        <sidebar @toggle-sidebar="toggleSidebar">
+          
+          <navlinks>
+            
+
+
+
+            
+          </navlinks><div id="searchbox" class="searchbox" role="search">
+  <div class="caption"><span class="caption-text">Quick search</span>
+    <div class="searchformwrapper">
+      <form class="search" action="search.html" method="get">
+        <input type="text" name="q" />
+        <input type="submit" value="Search" />
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+      </form>
+    </div>
+  </div>
+</div><div class="sidebar-links" role="navigation" aria-label="main navigation">
+  
+    <div class="sidebar-group">
+      <p class="caption">
+        <span class="caption-text"><a href="index.html#ukraine-wesm-model-docs-documentation">Contents:</a></span>
+      </p>
+      <ul class="current">
+        
+          <li class="toctree-l1 ">
+            
+              <a href="modelstructure.html" class="reference internal ">1. Model structure</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 current">
+            
+              <a href="#" class="reference internal current">2. Demand projections</a>
+            
+
+            
+              <ul>
+                
+                  <li class="toctree-l2"><a href="#current-energy-balance" class="reference internal">2.1 Current energy balance</a></li>
+                
+                  <li class="toctree-l2"><a href="#id2" class="reference internal">2.2 Demand projections</a></li>
+                
+                  <li class="toctree-l2"><a href="#sectors" class="reference internal">2.3 Sectors</a></li>
+                
+              </ul>
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="datainputs.html" class="reference internal ">3. Data inputs</a>
+            
+
+            
+          </li>
+
+        
+      </ul>
+    </div>
+  
+</div>
+        </sidebar>
+
+      <page>
+          <div class="body-header" role="navigation" aria-label="navigation">
+  
+  <ul class="breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+    
+    <li>2. Demand projections</li>
+  </ul>
+  
+
+  <ul class="page-nav">
+  <li class="prev">
+    <a href="modelstructure.html"
+       title="previous chapter">← 1. Model structure</a>
+  </li>
+  <li class="next">
+    <a href="datainputs.html"
+       title="next chapter">3. Data inputs →</a>
+  </li>
+</ul>
+  
+</div>
+<hr>
+          <div class="content" role="main" v-pre>
+            
+  <section id="demand-projections">
+<h1>2. Demand projections<a class="headerlink" href="#demand-projections" title="Link to this heading">¶</a></h1>
+<p>In the Ukraine WESM, demand curves are calculated exogenously and then provided to OSeMOSYS as inputs. A dedicated demand workbook has been developed to estimate energy service demand values across all sectors. This section outlines the underlying data sources, assumptions, and methodology behind the demand projections. Section 2.1 presents the method used to derive the initial baseline values for 2020, based on the official 2020 Ukrainian energy balance. Section 2.2 describes the main demand drivers used to develop projections, while Section 2.3 explains in greater detail how sectoral demands were defined and translated into projection pathways.</p>
+<section id="current-energy-balance">
+<h2>2.1 Current energy balance<a class="headerlink" href="#current-energy-balance" title="Link to this heading">¶</a></h2>
+<p>An energy balance provides a comprehensive overview of energy flows within a country over a given year. It breaks down primary supply—defined as Total Energy Supply (TES)—and final consumption—defined as Total Final Consumption (TFC).</p>
+<p>A particular focus is placed on transformation processes in line with the Ukrainian 2020 energy balance. These cover the conversion of primary energy into secondary carriers in:
+* Electricity plants (large producers generating electricity for the grid),
+* Combined Heat and Power (CHP) plants, where both electricity and heat are supplied, and
+* Dedicated heat plants, providing thermal energy for district heating systems.</p>
+<p>The 2020 Ukrainian national energy balance (originally in kilotonnes of oil equivalent, ktoe, converted into petajoules, PJ) served as the benchmark dataset <a class="footnote-reference brackets" href="#f1" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a> . The consumption of each fuel was then disaggregated into the main demand sectors: Residential, Industry, Commerce &amp; Services, Agriculture, Transport, Non-Energy Use, and Other.</p>
+</section>
+<section id="id2">
+<h2>2.2 Demand projections<a class="headerlink" href="#id2" title="Link to this heading">¶</a></h2>
+<p>The energy service demand projections were derived from the sectoral consumption values reported in the 2020 Ukrainian energy balance. Projections were built using a set of socio‑economic and technical drivers that reflect different development pathways. These included population, in millions of people, Gross Domestic Product (GDP), as well as the share of GDP per sector of the Economy. These drivers could aid in deriving demands under High, Central, and Low scenarios, and are currently under the Central/Mid scenario. Together, these drivers were linked to the sectoral demand categories to generate projections of useful energy demand. The accompanying table details how each projection driver was applied to individual service demands.</p>
+<table class="docutils align-left">
+<colgroup>
+<col style="width: 33.3%" />
+<col style="width: 33.3%" />
+<col style="width: 33.3%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Category</p></th>
+<th class="head"><p>Demand</p></th>
+<th class="head"><p>Driver</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Residential</p></td>
+<td><p>Cooling urban/rural</p></td>
+<td><p>Population</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>Lighting urban/rural</p></td>
+<td><p>Population</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>Heating urban/rural</p></td>
+<td><p>Population</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>Cooking</p></td>
+<td><p>Households/population</p></td>
+</tr>
+<tr class="row-even"><td><p>Commercial</p></td>
+<td><p>Fuels/commodities</p></td>
+<td><p>GDP growth rate/sector GDP</p></td>
+</tr>
+<tr class="row-odd"><td><p>Industry</p></td>
+<td><p>Fuels/commodities IM (Industry Manufacturing)</p></td>
+<td><p>GDP growth rate/sector GDP</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>Fuels/commodities IO (Industry Mining)</p></td>
+<td><p>GDP growth rate/sector GDP</p></td>
+</tr>
+<tr class="row-odd"><td><p>Iron Steel</p></td>
+<td><p>MT steel</p></td>
+<td><p>GDP growth rate/sector GDP</p></td>
+</tr>
+<tr class="row-even"><td><p>Agriculture</p></td>
+<td><p>Fuels/commodities</p></td>
+<td><p>GDP growth rate/sector GDP</p></td>
+</tr>
+<tr class="row-odd"><td><p>Transport</p></td>
+<td><p>Passenger transport buses-auto</p></td>
+<td><p>Population</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>Passenger transport rail</p></td>
+<td><p>Population</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>Passenger transport navigation</p></td>
+<td><p>Population</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>Freight transport road</p></td>
+<td><p>GDP</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>Freight transport rail</p></td>
+<td><p>GDP</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>Freight transport navigation</p></td>
+<td><p>GDP</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="sectors">
+<h2>2.3 Sectors<a class="headerlink" href="#sectors" title="Link to this heading">¶</a></h2>
+<section id="agriculture">
+<h3>Agriculture<a class="headerlink" href="#agriculture" title="Link to this heading">¶</a></h3>
+<p>In the agricultural sector, fuel consumption from the 2020 Ukrainian energy balance was aggregated across subsectors and then distributed into percentage shares according to the relevant energy service demands by fuel type, including electricity, biomass, and heat, among others. These allocations were expressed directly as final energy demand values (in petajoules, PJ), without conversion to useful energy.</p>
+</section>
+<section id="commercial-sector">
+<h3>Commercial sector<a class="headerlink" href="#commercial-sector" title="Link to this heading">¶</a></h3>
+<p>In the commercial and public services sector, fuel consumption from the 2020 Ukrainian energy balance was taken as the baseline and disaggregated into final energy demand categories. The sector covers a wide range of energy uses in offices, retail, public administration, education, health facilities, and other service buildings. Each type of demand is represented directly in the model as final energy demand, expressed in petajoules (PJ).</p>
+</section>
+<section id="industry">
+<h3>Industry<a class="headerlink" href="#industry" title="Link to this heading">¶</a></h3>
+<p>In the industrial sector, fuel consumption from the 2020 Ukrainian energy balance was disaggregated across three subsectors: non-metallic minerals (cement), food and drink, and Other industries. For each subsector, the share of consumption by fuel category was calculated as a percentage of the total allocation. The representation of industrial demand in the model is done directly at the final energy demand level, expressed in petajoules (PJ), without further conversion into useful energy.</p>
+</section>
+<section id="residential-sector">
+<h3>Residential sector<a class="headerlink" href="#residential-sector" title="Link to this heading">¶</a></h3>
+<p>In the residential sector, fuel consumption from the 2020 Ukrainian energy balance is divided between urban and rural households. For each fuel, a percentage split between urban and rural demand was calculated, summing to 100%. On this basis, residential final energy demand (PJ) was computed separately for urban and rural areas.</p>
+<p>Within each area, fuel consumption is further mapped to specific technologies under distinct energy service demands: cooling, cooking, heating &amp; hot water, lighting, and other electrical uses. Each demand is therefore represented both by its fuel category and by the relevant technology, which defines the base efficiency of conversion.</p>
+<p>The key demand–technology mappings are:</p>
+<ul class="simple">
+<li><p>Cooling</p>
+<ul>
+<li><p>Urban: Electricity – Base efficiency</p></li>
+<li><p>Rural: Electricity – Base efficiency</p></li>
+</ul>
+</li>
+<li><p>Cooking</p>
+<ul>
+<li><p>Urban:</p>
+<ul>
+<li><p>Coal – Base efficiency</p></li>
+<li><p>Electricity (induction) – Base efficiency</p></li>
+<li><p>Natural gas – Base efficiency</p></li>
+<li><p>LPG – Base efficiency</p></li>
+<li><p>Biomass (wood, charcoal) – Improved efficiency (e.g. improved stoves)</p></li>
+</ul>
+</li>
+<li><p>Rural:</p>
+<ul>
+<li><p>Coal – Base efficiency</p></li>
+<li><p>Electricity (induction) – Base efficiency</p></li>
+<li><p>Natural gas – Base efficiency</p></li>
+<li><p>LPG – Base efficiency</p></li>
+<li><p>Biomass – Improved efficiency (improved traditional stoves)</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Lighting</p>
+<ul>
+<li><p>Urban: Electricity – Base efficiency</p></li>
+<li><p>Rural: Electricity – Base efficiency</p></li>
+</ul>
+</li>
+<li><p>Heating &amp; Hot Water</p>
+<ul>
+<li><p>Urban:</p>
+<ul>
+<li><p>Coal – Base efficiency</p></li>
+<li><p>Oil products – Base efficiency</p></li>
+<li><p>Natural gas – Base efficiency</p></li>
+<li><p>Biomass – Base efficiency</p></li>
+<li><p>Electricity – Base efficiency</p></li>
+<li><p>District heating – Base efficiency</p></li>
+</ul>
+</li>
+<li><p>Rural:</p>
+<ul>
+<li><p>Coal – Base efficiency</p></li>
+<li><p>Oil products – Base efficiency</p></li>
+<li><p>Natural gas – Base efficiency</p></li>
+<li><p>Biomass – Base efficiency</p></li>
+<li><p>Electricity – Base efficiency</p></li>
+<li><p>District heating – Base efficiency</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>This detailed representation enables the model to capture both fuel use and technology choices within households, allowing for the analysis of fuel switching, electrification, efficiency improvements (e.g., modern biomass cookstoves, induction cooking), and the role of district heating in urban areas. It also accounts for the urban–rural divide in Ukraine’s residential energy system, where reliance on solid fuels remains higher in rural areas. In contrast, urban households are more integrated into the electricity and district heating networks.</p>
+</section>
+<section id="transport">
+<h3>Transport<a class="headerlink" href="#transport" title="Link to this heading">¶</a></h3>
+<p>In the transport sector, demand is represented in terms of transport services rather than direct fuel consumption. Drawing on the 2020 Ukrainian energy balance, passenger and freight activity levels were established and expressed in billion passenger-kilometres (BPKM) for passenger travel and billion tonne-kilometres (BTKM) for freight movement. These service demands are then met by specific transport technologies linked to different fuels.</p>
+<ul class="simple">
+<li><p>Passenger transport (BPKM):</p>
+<ul>
+<li><p>Buses (road transport): petroleum products, natural gas (CNG/LNG), biodiesel</p></li>
+<li><p>Rail transport: coal, diesel, electricity (reflecting both the diesel and electrified portions of Ukraine’s rail system)</p></li>
+<li><p>Navigation: petroleum products (mainly diesel and heavy fuel oil used in inland/coastal shipping)</p></li>
+</ul>
+</li>
+<li><p>Freight transport (BTKM):</p>
+<ul>
+<li><p>Road freight: petroleum products, natural gas, biodiesel</p></li>
+<li><p>Rail freight: coal, diesel, electricity</p></li>
+<li><p>Navigation (shipping): petroleum products</p></li>
+</ul>
+</li>
+</ul>
+<p>In the model, the final demands are expressed explicitly as BPKM for passenger transport and BTKM for freight transport, rather than in energy terms. The corresponding fuel use (in PJ) is then calculated based on the efficiency of the associated technologies. This design reflects the actual transport service demand in Ukraine’s economy, capturing the high share of rail in freight movement, the dominant role of petroleum products in road modes, and the potential for fuel switching and electrification in long-term transition pathways.</p>
+<p class="rubric">Footnotes</p>
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="f1" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
+<p>United Nations Statistics Division. (2025). UN Energy Statistics Data Portal. United Nations. <a class="reference external" href="https://unstats.un.org/unsd/energystats/dataPortal/">https://unstats.un.org/unsd/energystats/dataPortal/</a></p>
+</aside>
+</aside>
+</section>
+</section>
+</section>
+
+
+          </div>
+          <div class="page-nav">
+            <div class="inner"><ul class="page-nav">
+  <li class="prev">
+    <a href="modelstructure.html"
+       title="previous chapter">← 1. Model structure</a>
+  </li>
+  <li class="next">
+    <a href="datainputs.html"
+       title="next chapter">3. Data inputs →</a>
+  </li>
+</ul><div class="footer" role="contentinfo">
+      &#169; Copyright 2025, Roberto Heredia-Fonseca.
+    <br>
+    Created using <a href="http://sphinx-doc.org/">Sphinx</a> 8.2.3 with <a href="https://github.com/schettino72/sphinx_press_theme">Press Theme</a> 0.9.1.
+</div>
+            </div>
+          </div>
+      </page>
+    </div></div>
+    
+    
+  </body>
+</html>

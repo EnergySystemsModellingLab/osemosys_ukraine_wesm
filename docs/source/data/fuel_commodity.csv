@@ -1,112 +1,112 @@
 Fuel/commodity,Description
-AGRBIO,Agriculture biomass
-AGRCOA,Agriculture coal
-AGRELC,Agriculture electricity
-AGRHET,Agriculture heat
-AGRNGS,Agriculture ngs
-AGRPPP,Agriculture petroleum products
+AGRBIO,Agriculture biomass
+AGRCOA,Agriculture coal
+AGRELC,Agriculture electricity
+AGRHET,Agriculture heat
+AGRNGS,Agriculture ngs
+AGRPPP,Agriculture petroleum products
 BID,Biodiesel
-BIO,Mining bio
-COA,Mining coal
-COK,Default commodity
-COMBIO,Commercial biomass
-COMCOA,Commercial coal
-COMCOP,Commercial coal products
-COMELC,Commercial electricity
-COMHET,Commercial heat
-COMLPG,Commercial lpg
-COMNGS,Commercial ngs
-COP,Coal Products
-DEMABIO,Demand agr biomass
-DEMACOA,Demand agr coal
-DEMAELC,Demand agr electricity
-DEMAHEAT,Demand agr heat
-DEMANGS,Demand agr ngs
-DEMAPPP,Demand agr petroleum products
-DEMCBIO,Demand commercial and P serv biomass and waste
-DEMCCOA,Demand commercial and P serv coal
-DEMCCOP,Demand commercial and P serv coal products
-DEMCELC,Demand commercial and P serv electricity
-DEMCHET,Demand commercial and P serv heat
-DEMCLPG,Demand commercial and P serv lpg
-DEMCNGS,Demand commercial and P serv ngs
-DEMFTR,Demand freight transport btkm bus
-DEMFTRNAV,Demand freight transport btkm navi
-DEMFTRRAI,Demand freight transport btkm rail
-DEMIMMBIO,Demand industry IMM biomass
-DEMIMMCOA,Demand industry IMM coal
-DEMIMMCOP,Demand industry IMM coal prod
-DEMIMMELC,Demand industry IMM electricity
-DEMIMMHHET,Demand industry IMM heat
-DEMIMMNGS,Demand industry IMM ngs
-DEMIMMPPP,Demand industry IMM petroleum products
-DEMIOMBIO,Demand industry IOM biomass
-DEMIOMCOA,Demand industry IOM coal
-DEMIOMCOP,Demand industry IOM coal prod
-DEMIOMELC,Demand industry IOM electricity
-DEMIOMHET,Demand industry IOM heat
-DEMIOMNGS,Demand industry IOM ngs
-DEMIOMPPP,Demand industry IOM petroleum products
-DEMIST,Demand iron-steel MTpa
-DEMPTR,Demand passenger transport bpkm car bus
-DEMPTRNAV,Demand passenger transport bpkm navi
-DEMPTRRAI,Demand passenger transport bpkm rail
-DEMRC1,Demand - Residential - Cooling demand urban
-DEMRC2,Demand - Residential - Cooling demand rural
-DEMRK1,Demand - Residential - Cooking urban
-DEMRK2,Demand - Residential - Cooking rural
-DEMRL1,Demand - Residential - Lighting urban
-DEMRL2,Demand - Residential - Lighting rural
-DEMRO1,Demand - Residential - heating and hot water urban
-DEMRO2,Demand - Residential - heating and hot water rural
-ELC001,Electricity before T&D
-ELC002,Electricity after T&D
-ELCCOA,Electricity coal
-ELCNGS,Electricity ngs
-ELCSYG,Default commodity
-FTPSYG,Syngas for ft plant
-FTRBID,Freight transport biodiesel
-FTRCOA,Freight transport coal
-FTRELC,Freight transport electricity
-FTRNGS,Freight transport ngs
-FTRPPP,Freight transport petroleum products
+BIO,Mining bio
+COA,Mining coal
+COK,Default commodity
+COMBIO,Commercial biomass
+COMCOA,Commercial coal
+COMCOP,Commercial coal products
+COMELC,Commercial electricity
+COMHET,Commercial heat
+COMLPG,Commercial lpg
+COMNGS,Commercial ngs
+COP,Coal Products
+DEMABIO,Demand agr biomass
+DEMACOA,Demand agr coal
+DEMAELC,Demand agr electricity
+DEMAHEAT,Demand agr heat
+DEMANGS,Demand agr ngs
+DEMAPPP,Demand agr petroleum products
+DEMCBIO,Demand commercial and P serv biomass and waste
+DEMCCOA,Demand commercial and P serv coal
+DEMCCOP,Demand commercial and P serv coal products
+DEMCELC,Demand commercial and P serv electricity
+DEMCHET,Demand commercial and P serv heat
+DEMCLPG,Demand commercial and P serv lpg
+DEMCNGS,Demand commercial and P serv ngs
+DEMFTR,Demand freight transport btkm bus
+DEMFTRNAV,Demand freight transport btkm navi
+DEMFTRRAI,Demand freight transport btkm rail
+DEMIMMBIO,Demand industry IMM biomass
+DEMIMMCOA,Demand industry IMM coal
+DEMIMMCOP,Demand industry IMM coal prod
+DEMIMMELC,Demand industry IMM electricity
+DEMIMMHHET,Demand industry IMM heat
+DEMIMMNGS,Demand industry IMM ngs
+DEMIMMPPP,Demand industry IMM petroleum products
+DEMIOMBIO,Demand industry IOM biomass
+DEMIOMCOA,Demand industry IOM coal
+DEMIOMCOP,Demand industry IOM coal prod
+DEMIOMELC,Demand industry IOM electricity
+DEMIOMHET,Demand industry IOM heat
+DEMIOMNGS,Demand industry IOM ngs
+DEMIOMPPP,Demand industry IOM petroleum products
+DEMIST,Demand iron-steel MTpa
+DEMPTR,Demand passenger transport bpkm car bus
+DEMPTRNAV,Demand passenger transport bpkm navi
+DEMPTRRAI,Demand passenger transport bpkm rail
+DEMRC1,Demand - Residential - Cooling demand urban
+DEMRC2,Demand - Residential - Cooling demand rural
+DEMRK1,Demand - Residential - Cooking urban
+DEMRK2,Demand - Residential - Cooking rural
+DEMRL1,Demand - Residential - Lighting urban
+DEMRL2,Demand - Residential - Lighting rural
+DEMRO1,Demand - Residential - heating and hot water urban
+DEMRO2,Demand - Residential - heating and hot water rural
+ELC001,Electricity before T&D
+ELC002,Electricity after T&D
+ELCCOA,Electricity coal
+ELCNGS,Electricity ngs
+ELCSYG,Default commodity
+FTPSYG,Syngas for ft plant
+FTRBID,Freight transport biodiesel
+FTRCOA,Freight transport coal
+FTRELC,Freight transport electricity
+FTRNGS,Freight transport ngs
+FTRPPP,Freight transport petroleum products
 H2,H2
-H2ELC,Electricity for electrolyzers
+H2ELC,Electricity for electrolyzers
 HET,Heat
-INDBIO,Industry biomass
-INDCOA,Industry coal
-INDCOK,Industry coking coal
-INDCOP,Industry coal pro
-INDELC,Industry electricity
-INDHET,Industry heat
-INDNGS,Industry ngs
-INDPPP,Industry petroleum products
-IOR,Iron ore
-ISTBIO,Biomass iron-steel
-ISTCOA,Coal iron-steel
-ISTCOK,Coking coal iron-steel
-ISTELC,Electricity iron-steel
-ISTH2,H2 iron-steel 1E6 Kg
-ISTHET,Heat iron-steel
-ISTIOR,Iron ore iron-steel
-ISTNGS,NGS iron-steel
-ISTPPP,Petroleum products iron-steel
-ISTSCR,Scrap metal iron-steel
-LCFBIO,Biomas for low carbon fuels
-LPG,Mining lpg
-MTHSYG,Syngas for methanation plant
-NGS,Mining ngs
-NUC,Default commodity
-PPP,Petroleum products
-PTRBID,Passenger Transport biodiesel
-PTRCOA,Passenger Transport coal
-PTRELC,Default commodity
-PTRNGS,Passenger Transport ngs
-PTRPPP,Passenger Transport petroleum products diesel
-RESBIO,Residential bio
-RESCOA,Residential coal
-RESELC,Residential electricity
-RESLPG,Residential lpg
-RESNGS,Residential ngs
-SCR,Scrap metal
+INDBIO,Industry biomass
+INDCOA,Industry coal
+INDCOK,Industry coking coal
+INDCOP,Industry coal pro
+INDELC,Industry electricity
+INDHET,Industry heat
+INDNGS,Industry ngs
+INDPPP,Industry petroleum products
+IOR,Iron ore
+ISTBIO,Biomass iron-steel
+ISTCOA,Coal iron-steel
+ISTCOK,Coking coal iron-steel
+ISTELC,Electricity iron-steel
+ISTH2,H2 iron-steel 1E6 Kg
+ISTHET,Heat iron-steel
+ISTIOR,Iron ore iron-steel
+ISTNGS,NGS iron-steel
+ISTPPP,Petroleum products iron-steel
+ISTSCR,Scrap metal iron-steel
+LCFBIO,Biomas for low carbon fuels
+LPG,Mining lpg
+MTHSYG,Syngas for methanation plant
+NGS,Mining ngs
+NUC,Default commodity
+PPP,Petroleum products
+PTRBID,Passenger Transport biodiesel
+PTRCOA,Passenger Transport coal
+PTRELC,Default commodity
+PTRNGS,Passenger Transport ngs
+PTRPPP,Passenger Transport petroleum products diesel
+RESBIO,Residential bio
+RESCOA,Residential coal
+RESELC,Residential electricity
+RESLPG,Residential lpg
+RESNGS,Residential ngs
+SCR,Scrap metal
 SYG,Syngas
