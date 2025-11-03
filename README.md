@@ -1,17 +1,35 @@
 # OSeMOSYS Ukraine Whole Energy System Model (WESM)
 
-This repository hosts the **OSeMOSYS Ukraine Whole Energy System Model (WESM)**, developed under the **IAM Compact Project**.  
+This repository hosts the **OSeMOSYS Ukraine Whole Energy System Model (WESM)**.
+
+The model provides a representation of Ukraine’s energy system, including upstream sectors (e.g., primary energy extracted domestically or imported).
+
+![Ukraine WESM diagram](docs/source/fig/general_structure.png)
+
+Upstream primary energy includes:
+
+- **Domestic coal and natural gas**
+- **Imported primary energy carriers**
+
+The model also includes power and heat capacity. The power sector comprises:
+
+- **Nuclear, gas, and coal power plants**
+
+Renewable capacities covered include:
+
+- **Wind, solar, hydro, and biomass**
+
+Ukraine maintains substantial fossil fuel use and remains partially dependent on imports. Imported fuels and domestically produced energy are distributed across all sectors of the economy. Final energy demand in each sector is mapped to energy service requirements within the model, enabling the identification of a cost-optimal technology mix to meet Ukraine’s needs in the following sectors:
 The model provides a comprehensive representation of Ukraine’s energy system, covering the following sectors:  
 
 - **Agriculture**  
 - **Commerce**  
 - **Industry**  
+- **Iron & Steel**
 - **Residential**  
-- **Transport**  
+- **Transport (passenger and freight)**
 
 ⚡ *Note:* Energy storage technologies are **not included in the current version**.
-
-The dataset was prepared using **Version 5.3 of the Modelling User Interface for OSeMOSYS (MUIO)**, developed by **UNDESA**, with the model file embedded in the same version of the interface.  
 
 ---
 
@@ -31,8 +49,18 @@ Copyright holders are listed in the **Authors** section.
 ---
 
 ## 👥 Authors & Acknowledgements
-- Developed under the **IAM Compact Project**  
-- Data and UI support provided by **UNDESA – Modelling User Interface for OSeMOSYS (MUIO v5.3)**  
+This work has been supported by:
+
+- European Union’s Horizon Europe research and innovation programme under grant agreement no. 101056306 [**IAM Compact Project**](https://www.iam-compact.eu/).
+
+- The Strategic Hydrogen Integration for Low-Carbon Development [**SHIELD**](https://epg.eng.ox.ac.uk/shield) Ukraine project, funded by UK International Development from the UK government under the Ukraine Resilience and Energy Security Program (URES). *The views expressed do not necessarily reflect the UK government’s official policies.*
+
+The dataset was prepared using:
+
+- **Version 5.3 of the Modelling User Interface for OSeMOSYS (MUIO)**, developed by **UNDESA**, with the model file embedded in the same version of the interface.  
+
+Contribution
+
 - Contributions and copyright holders are listed in `wesm/authors.txt`  
 
 ---

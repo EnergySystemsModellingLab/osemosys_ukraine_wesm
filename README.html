@@ -49,8 +49,28 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="osemosys-ukraine-whole-energy-system-model-wesm" class="level1">
 <h1>OSeMOSYS Ukraine Whole Energy System Model (WESM)</h1>
-<p>This repository hosts the <strong>OSeMOSYS Ukraine Whole Energy System Model (WESM)</strong>, developed under the <strong>IAM Compact Project</strong>.<br>
-The model provides a comprehensive representation of Ukraine’s energy system, covering the following sectors:</p>
+<p>This repository hosts the <strong>OSeMOSYS Ukraine Whole Energy System Model (WESM)</strong>.</p>
+<p>The model provides a representation of Ukraine’s energy system, including upstream sectors (e.g., primary energy extracted domestically or imported).</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="docs/source/fig/general_structure.png" class="img-fluid figure-img"></p>
+<figcaption>Ukraine WESM diagram</figcaption>
+</figure>
+</div>
+<p>Upstream primary energy includes:</p>
+<ul>
+<li><strong>Domestic coal and natural gas</strong></li>
+<li><strong>Imported primary energy carriers</strong></li>
+</ul>
+<p>The model also includes power and heat capacity. The power sector comprises:</p>
+<ul>
+<li><strong>Nuclear, gas, and coal power plants</strong></li>
+</ul>
+<p>Renewable capacities covered include:</p>
+<ul>
+<li><strong>Wind, solar, hydro, and biomass</strong></li>
+</ul>
+<p>Ukraine maintains substantial fossil fuel use and remains partially dependent on imports. Imported fuels and domestically produced energy are distributed across all sectors of the economy. Final energy demand in each sector is mapped to energy service requirements within the model, enabling the identification of a cost-optimal technology mix to meet Ukraine’s needs in the following sectors: The model provides a comprehensive representation of Ukraine’s energy system, covering the following sectors:</p>
 <ul>
 <li><strong>Agriculture</strong><br>
 </li>
@@ -58,12 +78,12 @@ The model provides a comprehensive representation of Ukraine’s energy system, 
 </li>
 <li><strong>Industry</strong><br>
 </li>
+<li><strong>Iron &amp; Steel</strong></li>
 <li><strong>Residential</strong><br>
 </li>
-<li><strong>Transport</strong></li>
+<li><strong>Transport (passenger and freight)</strong></li>
 </ul>
 <p>⚡ <em>Note:</em> Energy storage technologies are <strong>not included in the current version</strong>.</p>
-<p>The dataset was prepared using <strong>Version 5.3 of the Modelling User Interface for OSeMOSYS (MUIO)</strong>, developed by <strong>UNDESA</strong>, with the model file embedded in the same version of the interface.</p>
 <hr>
 <section id="repository-structure" class="level2">
 <h2 class="anchored" data-anchor-id="repository-structure">📂 Repository Structure</h2>
@@ -83,11 +103,17 @@ Copyright holders are listed in the <strong>Authors</strong> section.</p>
 </section>
 <section id="authors-acknowledgements" class="level2">
 <h2 class="anchored" data-anchor-id="authors-acknowledgements">👥 Authors &amp; Acknowledgements</h2>
+<p>This work has been supported by:</p>
 <ul>
-<li>Developed under the <strong>IAM Compact Project</strong><br>
-</li>
-<li>Data and UI support provided by <strong>UNDESA – Modelling User Interface for OSeMOSYS (MUIO v5.3)</strong><br>
-</li>
+<li><p>European Union’s Horizon Europe research and innovation programme under grant agreement no. 101056306 <a href="https://www.iam-compact.eu/"><strong>IAM Compact Project</strong></a>.</p></li>
+<li><p>The Strategic Hydrogen Integration for Low-Carbon Development <a href="https://epg.eng.ox.ac.uk/shield"><strong>SHIELD</strong></a> Ukraine project, funded by UK International Development from the UK government under the Ukraine Resilience and Energy Security Program (URES). <em>The views expressed do not necessarily reflect the UK government’s official policies.</em></p></li>
+</ul>
+<p>The dataset was prepared using:</p>
+<ul>
+<li><strong>Version 5.3 of the Modelling User Interface for OSeMOSYS (MUIO)</strong>, developed by <strong>UNDESA</strong>, with the model file embedded in the same version of the interface.</li>
+</ul>
+<p>Contribution</p>
+<ul>
 <li>Contributions and copyright holders are listed in <code>wesm/authors.txt</code></li>
 </ul>
 <hr>
