@@ -1,0 +1,17 @@
+# OSeMOSYS Ukraine Whole Energy System Model (WESM)
+# Authors and Copyright Information
+# -------------------------------------------------
+# This file lists all contributors and institutions involved
+# in the development of this model.
+
+Lead Developers:
+- Roberto Heredia-Fonseca PhD — Imperial College London
+
+Contributors:
+-  Roberto Heredia-Fonseca PhD — Imperial College London, Lead Model Developer
+-  Adam Hawkes — Imperial College London, Project Manager
+
+Copyright © [Year(s)] The Authors and Contributors
+Licensed under:
+- Data files: CC BY 4.0
+- Model files: Apache 2.0
