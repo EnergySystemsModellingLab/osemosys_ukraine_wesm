@@ -8,8 +8,8 @@ Lead Developers:
 - Roberto Heredia-Fonseca PhD — Imperial College London
 
 Contributors:
--  Roberto Heredia-Fonseca PhD — Imperial College London, Lead Model Developer
--  Adam Hawkes — Imperial College London, Project Manager
+-  Roberto Heredia-Fonseca, PhD — Imperial College London, Lead Model Developer
+-  Adam Hawkes, Professor — Imperial College London, Project Manager
 
 Copyright © [Year(s)] The Authors and Contributors
 Licensed under:
